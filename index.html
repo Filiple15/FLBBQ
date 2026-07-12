@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FAVICON SITE -->
+     <link rel="shortcut icon" href="./src/favicon/favicon.ico" type="image/x-icon">
+    <!-- IMPORT DOS ICONES -->
+     <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- LINK dos CSS -->
+     <link rel="stylesheet" href="./src/style/global.css">
+     <link rel="stylesheet" href="./src/style/header.css">
+     <link rel="stylesheet" href="./src/style/banner.css">
+     <link rel="stylesheet" href="./src/style/categorias.css">
+     <link rel="stylesheet" href="./src/style/produtos.css">
+     <link rel="stylesheet" href="./src/style/marcas.css">
+     <link rel="stylesheet" href="./src/style/contato.css">
+     <link rel="stylesheet" href="./src/style/footer.css">
+    <title>FLBBQ</title>
+</head>
+<body>
+    <header class="header">
+
+        <!-- TOPO -->
+        <div class="header-top">
+            <div class="container">
+
+                <div class="header-contact">
+                    <a href="#">
+                        <i class="fa-regular fa-comment"></i>
+                        Fale Conosco
+                    </a>
+
+                    <a href="tel:+5518996168067">
+                        <i class="fa-solid fa-phone"></i>
+                        (18) 99616-8067
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        (18) 99616-8067
+                    </a>
+                </div>
+
+                <div class="header-user-links">
+                    <a href="#">
+                        <i class="fa-regular fa-file-lines"></i>
+                        Meus Pedidos
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-regular fa-user"></i>
+                        Minha Conta
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- PRINCIPAL -->
+        <div class="header-main">
+            <div class="container">
+
+                <div class="logo">
+                    <a href="./index.html"><img src="./src/assets/imgs/logo.png" alt="FLBBQ"></a>
+                </div>
+
+                <form class="search-box">
+                    <input type="text" placeholder="Digite o que você procura">
+                    <button onclick="procurar()">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </form>
+
+                <div class="header-actions">
+
+                    <a href="#" class="account">
+                        <i class="fa-regular fa-user"></i>
+
+                        <div>
+                            <span>Entrar</span>
+                            <small>ou cadastre-se</small>
+                        </div>
+                    </a>
+
+                    <a href="#" class="cart">
+                        <i class="fa-solid fa-cart-shopping"></i>
+
+                        <div>
+                            <span>Carrinho</span>
+                            <small>R$ 0,00</small>
+                        </div>
+
+                        <span class="cart-badge">0</span>
+                    </a>
+
+                </div>
+
+            </div>
+        </div>
+        <hr>
+
+        <!-- MENU -->
+        <nav class="navbar">
+            <div class="container">
+
+                <ul>
+                    <li><a href="#">Bonés Importados</a></li>
+                    <li><a href="#">Vestuário</a></li>
+                    <li><a href="#">Térmicos</a></li>
+                    <li><a href="#">Cerveja</a></li>
+                    <li><a href="#">Abridores de Garrafa</a></li>
+                    <li><a href="#">Bolsas e Mochilas</a></li>
+                    <li><a href="#">Cadeiras e Decoração</a></li>
+                    <li><a href="#">+ Categorias</a></li>
+                </ul>
+
+            </div>
+        </nav> 
+
+    </header>
+
+    <a href="https://api.whatsapp.com/send/?phone=5518996168067&text=Seja+bem+bem+vindo+ao+FLBBQ%2C+em+que+posso+te+ajudar+hoje" class="btn-contato" target="_blank">
+        <img src="./src/assets/imgs/ico/whatsapp.png" alt="Contato">
+    </a>
+
+    <main>
+
+        <div class="main-conteiner">
+
+            <!-- Slider -->
+
+            <div class="banner-slider">
+
+                <img src="./src/assets/imgs/banners/banner1.jpg" class="slide active">
+                <img src="./src/assets/imgs/banners/banner2.jpg" class="slide">
+                <img src="./src/assets/imgs/banners/banner3.jpg" class="slide">
+                <img src="./src/assets/imgs/banners/banner4.jpg" class="slide">
+
+            </div>
+
+            <!-- Overlay -->
+
+            <div class="banner-overlay"></div>
+
+            <!-- Botões -->
+
+            <button class="banner-btn prev">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+
+            <button class="banner-btn next">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+
+            <!-- Conteúdo -->
+
+            <div class="main-content">
+
+                <h2>
+                    OUTDOOR DE VERDADE
+                    <span>SE VIVE, NÃO SE EXPLICA</span>
+                </h2>
+
+                <p>
+                    Equipamentos e acessórios das melhores marcas para sua aventura.
+                </p>
+
+                <button>
+
+                    <a href="#destaques">VER PRODUTOS</a>
+
+                    <i class="fa-solid fa-chevron-right"></i>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <div class="banner-info">
+
+        <div class="info-item">
+
+            <i class="fa-solid fa-truck"></i>
+
+            <div>
+
+                <h4>ENVIO PARA TODO BRASIL</h4>
+
+                <p>Com agilidade e segurança</p>
+
+            </div>
+
+        </div>
+
+        <div class="info-item">
+
+            <i class="fa-regular fa-credit-card"></i>
+
+            <div>
+
+                <h4>PARCELE EM ATÉ 12X</h4>
+
+                <p>No cartão de crédito</p>
+
+            </div>
+
+        </div>
+
+        <div class="info-item">
+
+            <i class="fa-regular fa-gem"></i>
+
+            <div>
+
+                <h4>DESCONTO NO PIX</h4>
+
+                <p>5% de desconto</p>
+
+            </div>
+
+        </div>
+
+        <div class="info-item">
+
+            <i class="fa-solid fa-shield-halved"></i>
+
+            <div>
+
+                <h4>COMPRA 100% SEGURA</h4>
+
+                <p>Seus dados protegidos</p>
+
+            </div>
+
+        </div>
+
+    </div>
+    <section id="categorias">
+
+        <h2 class="categoria-title">Categorias</h2>
+
+        <div class="categoria-container">
+
+            <div class="categoria" onclick="categoria('bone')">
+                <div class="categoria-img">
+                    <img src="./src/assets/imgs/categorias/BONE.png" alt="Boné">
+                </div>
+                <h3>Bonés Importados</h3>
+            </div>
+
+            <div class="categoria">
+                <div class="categoria-img" onclick="categoria('mochila')">
+                    <img src="./src/assets/imgs/categorias/BOUSA_MOCHILA.png" alt="Mochila">
+                </div>
+                <h3>Bolsas e Mochilas</h3>
+            </div>
+
+            <div class="categoria" onclick="categoria('vestuario')">
+                <div class="categoria-img">
+                    <img src="./src/assets/imgs/categorias/VESTUARIO.png" alt="Vestuário">
+                </div>
+                <h3>Vestuário</h3>
+            </div>
+
+            <div class="categoria" onclick="categoria('termico')">
+                <div class="categoria-img">
+                    <img src="./src/assets/imgs/categorias/TERMICOS.png" alt="Térmico">
+                </div>
+                <h3>Térmicos</h3>
+            </div>
+
+            <div class="categoria" onclick="categoria('terere')">
+                <div class="categoria-img">
+                    <img src="./src/assets/imgs/categorias/ERVA.png" alt="Tereré">
+                </div>
+                <h3>Ervas para Tereré</h3>
+            </div>
+
+            <div class="categoria" onclick="categoria('abridor')">
+                <div class="categoria-img">
+                    <img src="./src/assets/imgs/categorias/ABRIDOR_GARRAFA.png" alt="Abridor">
+                </div>
+                <h3>Abridores</h3>
+            </div>
+
+            <div class="categoria" onclick="categoria('cerveja')">
+                <div class="categoria-img">
+                    <img src="./src/assets/imgs/categorias/CERVEJA.png" alt="Cerveja">
+                </div>
+                <h3>Cerveja</h3>
+            </div>
+
+            <div class="categoria">
+                <div class="categoria-img" onclick="categoria('cadeira')">
+                    <img src="./src/assets/imgs/categorias/CADEIRAS_DECORACAO.png" alt="Cadeira">
+                </div>
+                <h3>Cadeiras</h3>
+            </div>
+
+            <div class="categoria" id="TodasCategorias">
+
+                <div class="categoria-img" onclick="categoria('todos')">
+
+                    <img
+                        id="imgTodasCategorias"
+                        src="./src/assets/imgs/categorias/CUTELEIRA.png"
+                        alt="Todas as categorias"
+                    >
+
+                </div>
+
+                <h3>Todas</h3>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="destaques">
+
+        <div class="container">
+
+            <div class="section-header">
+
+                <h2>Destaques</h2>
+
+                <a href="#">Ver todos</a>
+
+            </div>
+
+            <div class="produtos">
+
+                <!-- Produto -->
+
+                <article class="card-produto">
+
+                    <span class="status mais-vendido">Mais Vendido</span>
+
+                    <div class="image-produto" id="produto">
+
+                        <img src="./src/assets/imgs/produtos/Bone-Columbia-PFG.png" alt="Image Produto">
+
+                    </div>
+
+                    <div class="info-produto">
+
+                        <h3>
+                            Boné Columbia importado PFG
+                        </h3>
+
+                        <div class="avaliacao">
+
+                            ★★★★★
+                            <span>(498)</span>
+
+                        </div>
+
+                        <div class="preco">
+
+                            R$ 259,90
+
+                        </div>
+
+                        <div class="parcelas">
+
+                            ou 12x de R$ 12,48
+
+                        </div>
+
+                        <div class="pix">
+
+                            5% OFF no PIX
+
+                        </div>
+
+                        <button>
+
+                            <i class="fa-solid fa-cart-shopping"></i>
+
+                            Comprar
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+                <!-- Repita os outros produtos -->
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="marcas">
+
+        <div class="container">
+
+            <div class="section-header">
+
+                <h2>Marcas Parceiras</h2>
+
+            </div>
+
+            <div class="marcas-slider">
+
+                <div class="marcas-track">
+
+                    <!-- PRIMEIRA LISTA -->
+
+                    <a href="https://www.basspro.com/home" class="marca" target="_blank">
+                        <img src="./src/assets/imgs/marcas/bassproshops.png" alt="Bass Pro Shops">
+                    </a>
+
+                    <a href="https://www.columbiasportswear.com.br/" class="marca" target="_blank">
+                        <img src="./src/assets/imgs/marcas/columbia.png" alt="Columbia">
+                    </a>
+
+                    <a href="https://www.yeti.com/" class="marca" target="_blank">
+                        <img src="./src/assets/imgs/marcas/yeti.png" alt="YETI">
+                    </a>
+
+                    <a href="https://www.guinness.com/" class="marca" target="_blank">
+                        <img src="./src/assets/imgs/marcas/guinness.png" alt="Guinness">
+                    </a>
+
+                    <a href="https://trots.com.br/" class="marca" target="_blank">
+                        <img src="./src/assets/imgs/marcas/trots.png" alt="Trots">
+                    </a>
+
+                    <a href="https://www.budlight.com/" class="marca" target="_blank">
+                        <img src="./src/assets/imgs/marcas/budlight.png" alt="Bud Light">
+                    </a>
+
+                    <a href="#" class="marca">
+                        <img src="./src/assets/imgs/marcas/bronwning.png" alt="Browning">
+                    </a>
+
+                    <a href="#" class="marca">
+                        <img src="./src/assets/imgs/marcas/cabelas.png" alt="Cabelas">
+                    </a>
+
+                    <a href="#" class="marca">
+                        <img src="./src/assets/imgs/marcas/coleman.png" alt="Coleman">
+                    </a>
+
+                    <a href="#" class="marca">
+                        <img src="./src/assets/imgs/marcas/coors.png" alt="Coors">
+                    </a>
+
+                    <a href="#" class="marca">
+                        <img src="./src/assets/imgs/marcas/kershaw.png" alt="Kershaw">
+                    </a>
+
+                    <a href="#" class="marca">
+                        <img src="./src/assets/imgs/marcas/miller.png" alt="Miller">
+                    </a>
+
+                    <a href="#" class="marca">
+                        <img src="./src/assets/imgs/marcas/modelo.png" alt="Modelo">
+                    </a>
+
+                    <!-- SEGUNDA LISTA (DUPLICADA) -->
+
+                    <a href="https://www.basspro.com/home" class="marca" target="_blank">
+                        <img src="./src/assets/imgs/marcas/bassproshops.png" alt="Bass Pro Shops">
+                    </a>
+
+                    <a href="https://www.columbiasportswear.com.br/" class="marca" target="_blank">
+                        <img src="./src/assets/imgs/marcas/columbia.png" alt="Columbia">
+                    </a>
+
+                    <a href="https://www.yeti.com/" class="marca" target="_blank">
+                        <img src="./src/assets/imgs/marcas/yeti.png" alt="YETI">
+                    </a>
+
+                    <a href="https://www.guinness.com/" class="marca" target="_blank">
+                        <img src="./src/assets/imgs/marcas/guinness.png" alt="Guinness">
+                    </a>
+
+                    <a href="https://trots.com.br/" class="marca" target="_blank">
+                        <img src="./src/assets/imgs/marcas/trots.png" alt="Trots">
+                    </a>
+
+                    <a href="https://www.budlight.com/" class="marca" target="_blank">
+                        <img src="./src/assets/imgs/marcas/budlight.png" alt="Bud Light">
+                    </a>
+
+                    <a href="#" class="marca">
+                        <img src="./src/assets/imgs/marcas/bronwning.png" alt="Browning">
+                    </a>
+
+                    <a href="#" class="marca">
+                        <img src="./src/assets/imgs/marcas/cabelas.png" alt="Cabelas">
+                    </a>
+
+                    <a href="#" class="marca">
+                        <img src="./src/assets/imgs/marcas/coleman.png" alt="Coleman">
+                    </a>
+
+                    <a href="#" class="marca">
+                        <img src="./src/assets/imgs/marcas/coors.png" alt="Coors">
+                    </a>
+
+                    <a href="#" class="marca">
+                        <img src="./src/assets/imgs/marcas/kershaw.png" alt="Kershaw">
+                    </a>
+
+                    <a href="#" class="marca">
+                        <img src="./src/assets/imgs/marcas/miller.png" alt="Miller">
+                    </a>
+
+                    <a href="#" class="marca">
+                        <img src="./src/assets/imgs/marcas/modelo.png" alt="Modelo">
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer>
+
+        <div class="container footer-container">
+
+            <!-- Logo -->
+
+            <div class="footer-logo">
+
+                <img src="./src/assets/imgs/logo.png" alt="FLBBQ">
+
+                <p>
+                    Os melhores produtos para quem vive o verdadeiro
+                    outdoor.
+                </p>
+
+                <div class="footer-social">
+
+                    <!-- Instagram -->
+                    <a href="https://instagram.com/flbbq" target="_blank" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <!-- WhatsApp -->
+                    <a href="https://api.whatsapp.com/send/?phone=5518996168067&text=Seja+bem+bem+vindo+ao+FLBBQ%2C+em+que+posso+te+ajudar+hoje" target="_blank" aria-label="WhatsApp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+
+                    <!-- E-mail -->
+                    <a href="mailto:contato@flbbq.com.br" aria-label="E-mail">
+                        <i class="fa-regular fa-envelope"></i>
+                    </a>
+
+                    <a href="https://www.google.com/maps/search/?api=1&query=Av.+Cel.+José+Soares+Marcondes,+3364+-+Jardim+Bongiovani,+Presidente+Prudente+-+SP,+19050-230" target="_blank" aria-label="Nossa localização">
+                        <i class="fa-solid fa-map-location-dot"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- Newsletter -->
+
+            <div class="footer-news">
+
+                <h3>Receba nossas ofertas</h3>
+
+                <p>
+                    Cadastre-se e receba ofertas exclusivas.
+                </p>
+
+                <form>
+
+                    <input
+                        type="email"
+                        placeholder="Seu melhor e-mail"
+                    >
+
+                    <button>
+
+                        <i class="fa-solid fa-paper-plane"></i>
+
+                    </button>
+
+                </form>
+
+            </div>
+
+            <!-- Institucional -->
+
+            <div class="footer-links">
+
+                <h3>Institucional</h3>
+
+                <ul>
+
+                    <li><a href="#">Quem Somos</a></li>
+
+                    <li><a href="#">Política de Privacidade</a></li>
+
+                    <li><a href="#">Trocas e Devoluções</a></li>
+
+                    <li><a href="#">Formas de Pagamento</a></li>
+
+                    <li><a href="#">Contato</a></li>
+
+                </ul>
+
+            </div>
+
+            <!-- Atendimento -->
+
+            <div class="footer-contact">
+
+                <h3>Atendimento</h3>
+
+                <ul>
+
+                    <li>
+
+                        <i class="fa-brands fa-whatsapp"></i>
+
+                        (18) 99999-9999
+
+                    </li>
+
+                    <li>
+
+                        <i class="fa-solid fa-phone"></i>
+
+                        18 996168067
+
+                    </li>
+
+                    <li>
+
+                        <i class="fa-regular fa-envelope"></i>
+
+                        flbbq@hotmail.com
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <div class="container">
+
+                <p>
+
+                    © 2026 FLBBQ - Todos os direitos reservados.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script src="./src/assets/JS/main.js"></script>
+    <script src="./src/assets/JS/banner/script.js"></script>
+    <script src="./src/assets/JS/categorias/script.js"></script>
+</body>
+</html>

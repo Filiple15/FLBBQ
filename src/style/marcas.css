@@ -1,0 +1,305 @@
+/*====================================
+        MARCAS PARCEIRAS
+====================================*/
+
+#marcas{
+
+    width:100%;
+
+    transform: translateY(-10vh);
+
+    display:flex;
+    justify-content:center;
+
+    padding:0 20px 20px;
+
+    background: var(--black);
+
+}
+
+#marcas .container{
+
+    width:100%;
+    max-width:1300px;
+
+    background:var(--black-light);
+
+    padding:0 20px 25px;
+
+    border-radius:var(--radius-md);
+
+}
+
+/*====================================
+        CABEÇALHO
+====================================*/
+
+#marcas .section-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin:15px 0;
+
+}
+
+#marcas .section-header h2{
+
+    font-family:var(--font-secund);
+
+    color:var(--white);
+
+    font-size:1.7rem;
+
+}
+
+#marcas .section-header a{
+
+    color:var(--gold);
+
+    text-decoration:none;
+
+    font-family:var(--font-primary);
+
+    font-size:.95rem;
+
+    transition:var(--transition-normal);
+
+}
+
+/*====================================
+            SLIDER
+====================================*/
+
+.marcas-slider{
+    position:relative;
+    display: flex;
+    align-items: self-end;
+    overflow:hidden;
+    width:100%;
+    height: 15vh;
+
+}
+
+/*====================================
+        FADE LATERAL
+====================================*/
+
+.marcas-slider::before,
+.marcas-slider::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    width:120px;
+
+    height:100%;
+
+    z-index:5;
+
+    pointer-events:none;
+
+}
+
+.marcas-slider::before{
+
+    left:0;
+
+    background:linear-gradient(
+        to right,
+        var(--black-light),
+        transparent
+    );
+
+}
+
+.marcas-slider::after{
+
+    right:0;
+
+    background:linear-gradient(
+        to left,
+        var(--black-light),
+        transparent
+    );
+
+}
+
+/*====================================
+            ESTEIRA
+====================================*/
+
+.marcas-track{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+    width:max-content;
+
+    animation:marquee 35s linear infinite;
+
+}
+
+/*====================================
+        PAUSA A ANIMAÇÃO
+====================================*/
+
+.marcas-slider:hover .marcas-track{
+
+    animation-play-state:paused;
+
+}
+
+/*====================================
+            CARD
+====================================*/
+
+.marca{
+
+    flex:0 0 190px;
+
+    height:85px;
+
+    background:var(--white);
+
+    border-radius:var(--radius-md);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-decoration:none;
+
+    border:1px solid rgba(0,0,0,.08);
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease,
+        border-color .35s ease;
+
+}
+
+/*====================================
+        HOVER CARD
+====================================*/
+
+.marca:hover{
+
+    transform:translateY(-8px);
+
+    border-color:var(--gold);
+
+    box-shadow:0 15px 30px rgba(0,0,0,.25);
+
+}
+
+/*====================================
+            LOGO
+====================================*/
+
+.marca img{
+
+    max-width:75%;
+
+    max-height:58%;
+
+    object-fit:contain;
+
+    transition:transform .35s ease;
+
+}
+
+/*====================================
+        HOVER LOGO
+====================================*/
+
+.marca:hover img{
+
+    transform:scale(1.08);
+
+}
+
+/*====================================
+            ANIMAÇÃO
+====================================*/
+
+@keyframes marquee{
+
+    from{
+
+        transform:translateX(0);
+
+    }
+
+    to{
+
+        transform:translateX(calc(-50% - 8px));
+
+    }
+
+}
+
+/*====================================
+        RESPONSIVIDADE
+====================================*/
+
+@media (max-width:1024px){
+
+    .marca{
+
+        flex:0 0 170px;
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    #marcas{
+
+        padding:0 10px 20px;
+
+    }
+
+    #marcas .section-header{
+
+        flex-direction:column;
+
+        gap:10px;
+
+        align-items:flex-start;
+
+    }
+
+    .marca{
+
+        flex:0 0 150px;
+
+        height:75px;
+
+    }
+
+}
+
+@media (max-width:480px){
+
+    .marca{
+
+        flex:0 0 130px;
+
+        height:65px;
+
+    }
+
+}
