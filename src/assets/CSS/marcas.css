@@ -1,0 +1,295 @@
+/*====================================
+        MARCAS PARCEIRAS
+====================================*/
+
+#marcas{
+
+    width:100%;
+    display:flex;
+    justify-content:center;
+    padding:0 20px 20px;
+
+}
+
+#marcas .container{
+
+    width:100%;
+    background:var(--houver-bg);
+    margin: auto 3vh;
+    padding:0 20px 25px;
+
+    border-radius:var(--radius-md);
+
+}
+
+/*====================================
+        CABEÇALHO
+====================================*/
+
+#marcas .section-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin:15px 0;
+
+}
+
+#marcas .section-header h2{
+
+    font-family:var(--font-secundaria);
+
+    color:var(--principal-texto-cor);
+
+    font-size:1.3rem;
+
+}
+
+#marcas .section-header a{
+
+    color: #000;
+
+    text-decoration:none;
+
+    font-size:.7rem;
+
+    transition:var(--transicao-md);
+
+}
+
+/*====================================
+            SLIDER
+====================================*/
+
+.marcas-slider{
+    position:relative;
+    display: flex;
+    align-items: self-end;
+    overflow:hidden;
+    width:100%;
+    height: 15vh;
+
+}
+
+/*====================================
+        FADE LATERAL
+====================================*/
+
+.marcas-slider::before,
+.marcas-slider::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    width:120px;
+
+    height:100%;
+
+    z-index:5;
+
+    pointer-events:none;
+
+}
+
+.marcas-slider::before{
+
+    left:0;
+
+    background:linear-gradient(
+        to right,
+        var(--houver-bg),
+        transparent
+    );
+
+}
+
+.marcas-slider::after{
+
+    right:0;
+
+    background:linear-gradient(
+        to left,
+        var(--houver-bg),
+        transparent
+    );
+
+}
+
+/*====================================
+            ESTEIRA
+====================================*/
+
+.marcas-track{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+    width:max-content;
+
+    animation:marquee 35s linear infinite;
+
+}
+
+/*====================================
+        PAUSA A ANIMAÇÃO
+====================================*/
+
+.marcas-slider:hover .marcas-track{
+
+    animation-play-state:paused;
+
+}
+
+/*====================================
+            CARD
+====================================*/
+
+.marca{
+
+    flex:0 0 190px;
+
+    height:85px;
+
+    background: #fff;
+
+    border-radius:var(--radius-md);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-decoration:none;
+
+    border:1px solid rgba(0,0,0,.08);
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease,
+        border-color .35s ease;
+
+}
+
+/*====================================
+        HOVER CARD
+====================================*/
+
+.marca:hover{
+
+    transform:translateY(-8px);
+
+    border-color:var(--gold);
+
+    box-shadow: var(--shadow-lg);
+
+}
+
+/*====================================
+            LOGO
+====================================*/
+
+.marca img{
+
+    max-width:75%;
+
+    max-height:58%;
+
+    object-fit:contain;
+
+    transition:transform .35s ease;
+
+}
+
+/*====================================
+        HOVER LOGO
+====================================*/
+
+.marca:hover img{
+
+    transform:scale(1.08);
+
+}
+
+/*====================================
+            ANIMAÇÃO
+====================================*/
+
+@keyframes marquee{
+
+    from{
+
+        transform:translateX(0);
+
+    }
+
+    to{
+
+        transform:translateX(calc(-50% - 8px));
+
+    }
+
+}
+
+/*====================================
+        RESPONSIVIDADE
+====================================*/
+
+@media (max-width:1024px){
+
+    .marca{
+
+        flex:0 0 170px;
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    #marcas{
+
+        padding:0 10px 20px;
+
+    }
+
+    #marcas .section-header{
+
+        flex-direction:column;
+
+        gap:10px;
+
+        align-items:flex-start;
+
+    }
+
+    .marca{
+
+        flex:0 0 150px;
+
+        height:75px;
+
+    }
+
+}
+
+@media (max-width:480px){
+
+    .marca{
+
+        flex:0 0 130px;
+
+        height:65px;
+
+    }
+
+}

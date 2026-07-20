@@ -1,0 +1,118 @@
+/* ---------------------------------
+    IMPORTS DOS ELEMENTOS VISUAIS
+--------------------------------- */
+@import url(../assets/CSS/variaveis.css); /* AONDE FICA AS FONTS E VARIAVEIS DO CSS */
+@import url(../components/header/style.css); /* CSS DO HEADER */
+@import url(../components/footer/style.css); /* CSS DO FOOTER */
+@import url(../assets/CSS/banner.css); /* CSS DO BANNER */
+@import url(../../src/assets/CSS/categorias.css); /* CSS DAS CATEGORIAS IMG */
+@import url(../../src/assets/CSS/produtos.css); /* CSS DA PARTE DE LISTAGEM DE PRODUTOS */
+@import url(../assets/CSS/marcas.css); /* CSS DAS MARCAS PARCEIRAS */
+
+
+/* =========================
+   RESET
+========================= */
+
+*,
+*::before,
+*::after{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+    color-scheme: dark;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    min-height:100vh;
+
+    background:var(--principal-bg);
+
+    color:var(--principal-texto-cor);
+
+    font-family:var(--font-principal);
+
+    overflow-x:hidden;
+
+}
+
+/* =========================
+   ELEMENTOS GLOBAIS
+========================= */
+
+img{
+    display:block;
+    max-width:100%;
+    height:auto;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+button{
+
+    border:none;
+
+    background:none;
+
+    font:inherit;
+
+    cursor:pointer;
+
+}
+
+input,
+textarea,
+select{
+
+    font:inherit;
+
+    border:none;
+
+    outline:none;
+
+}
+
+ul,
+ol{
+    list-style:none;
+}
+
+hr{
+    border:none;
+    border-top:1px solid var(--principal-texto-cor);
+    opacity:.15;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container{
+
+    width:min(1400px,95%);
+
+    margin-inline:auto;
+
+}
+
+/* =========================
+   MAIN
+========================= */
+
+main{
+
+    width:100%;
+    transition:var(--transicao-lg);
+
+}

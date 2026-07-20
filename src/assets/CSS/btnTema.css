@@ -1,0 +1,163 @@
+
+/* ---------------------------------
+    ESTILO DE TEMAS DO SITE
+--------------------------------- */
+
+body.tema-claro{
+
+    /* COR PRINCIPAL DO FUNDO */
+    --principal-bg:#f6f0da;
+    --houver-bg:#d5d2cc;
+    --invertido-bg:#111111;
+
+    /* COR PRINCIPAL DO TEXTO */
+    --principal-texto-cor:#181818;
+    --invertido-texto-cor:#F1F1F1;
+
+    --gray: #dfdfdf;
+    --gray-light: #ececec;
+
+
+    /* COR PRINCIPAL ELEMENTS SITE */
+    --color-secondary: #764714;
+    --color-secondary-hover: #ac651e;
+    --color-secondary-light: #cc7014;
+    --color-secondary-dark: #4c2c08;
+
+    /* COR SECUNDARIA ELEMENTS SITE */
+    --color-primary: #6e8f38;
+    --color-primary-hover: #87aa54;
+    --color-primary-light: #83b348;
+    --color-primary-dark: #233709;
+}
+
+
+/*====================================
+    VISUAL DO BOTÃO DE TEMA
+====================================*/
+
+.toggle{
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+}
+
+/* Esconde o checkbox */
+
+.toggle input{
+
+    display:none;
+
+}
+
+/* Botão */
+
+.toggle-btn{
+
+    position:relative;
+
+    width:8vh;
+    height:4vh;
+
+    display: flex;
+    align-items: center;
+
+    border-radius: var(--radius-full);
+
+    background:var(--houver-bg);
+
+    cursor:pointer;
+
+    transition:var(--transicao-md);
+
+    box-shadow:var(--shadow-sm);
+
+}
+
+/* Bola */
+
+.toggle-btn .button{
+
+    position:absolute;
+
+    top:3px;
+    left:3px;
+
+    width:3vh;
+    height:3vh;
+
+    border-radius:50%;
+
+    background:var(--invertido-bg);
+
+    transition: var(--transicao-md);
+
+    box-shadow: var(--shadow-md);
+
+}
+
+/* Ícones */
+
+.toggle-btn .icon{
+
+    position:absolute;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    font-size:.9rem;
+
+    transition: var(--transicao-md);
+
+}
+
+.toggle-btn .sol{
+
+    right:10px;
+
+    color: var(--aviso);
+
+}
+
+.toggle-btn .lua{
+
+    left:10px;
+
+    color: var(--info);
+
+    opacity:0;
+
+}
+
+/* Hover */
+
+.toggle-btn:hover{
+
+    box-shadow:var(--shadow-sm);
+
+}
+
+/* Tema claro */
+
+.toggle input:checked + .toggle-btn .button{
+
+    transform:translateX(4vh);
+
+    background:var(--invertido-bg);
+
+}
+
+.toggle input:checked + .toggle-btn .sol{
+
+    opacity:0;
+
+}
+
+.toggle input:checked + .toggle-btn .lua{
+
+    opacity:1;
+
+}

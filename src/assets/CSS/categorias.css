@@ -1,0 +1,174 @@
+/*======================================
+            CATEGORIAS
+=======================================*/
+
+#categorias{
+
+    width: 100%;
+    margin: 2vh auto;
+
+}
+
+#categorias h2{
+    margin-left: 4vh;
+}
+
+/*============================
+        TÍTULO
+=============================*/
+
+.categoria-title{
+
+    font-family: var(--font-secundaria);
+
+    font-size: 1.2rem;
+
+    color: var(--principal-texto-cor);
+
+    text-transform: uppercase;
+
+    margin-bottom: 2vh;
+
+}
+
+/*============================
+    CONTAINER DAS CATEGORIAS
+=============================*/
+
+.categoria-container{
+
+    display: flex;
+
+    padding: 0px 3.5vh;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+/*============================
+        CARD
+=============================*/
+
+.categoria{
+
+    width: 120px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    cursor: pointer;
+
+    transition: var(--transicao-md);
+
+}
+
+/*============================
+    CÍRCULO DA IMAGEM
+=============================*/
+
+.categoria-img{
+
+    width: 125px;
+
+    height: 125px;
+
+    border-radius: 50%;
+
+    border: 1px solid var(--color-secondary-dark);
+
+    background: var(--houver-bg);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    overflow: hidden;
+
+    transition: var(--transicao-sm);
+
+}
+
+/*============================
+        IMAGEM
+=============================*/
+
+.categoria-img img{
+
+    width: 78%;
+
+    transition: .35s;
+
+}
+
+/*============================
+        TEXTO
+=============================*/
+
+.categoria h3{
+
+    margin-top: 15px;
+
+    font-size: .8rem;
+
+    color: var(--principal-texto-cor);
+
+    text-align: center;
+
+    line-height: 1.2;
+
+    font-weight: 500;
+
+}
+
+/*============================
+        HOVER
+=============================*/
+
+.categoria:hover .categoria-img{
+
+    border-color: var(--gold);
+
+    box-shadow: var(--shadow-lg);
+
+}
+
+.categoria:hover img{
+
+    transform: scale(1.08);
+
+}
+
+.categoria:hover h3{
+
+    color: var(--color-secondary-hover);
+
+}
+
+
+/*====================================
+        TODAS AS CATEGORIAS
+====================================*/
+
+#TodasCategorias .categoria-img img{
+
+    transition: opacity .35s ease,
+                transform .35s ease;
+
+}
+
+/* Classe usada pelo JavaScript */
+
+#TodasCategorias .categoria-img img.fade{
+
+    opacity:0;
+
+    transform:scale(.92);
+
+}

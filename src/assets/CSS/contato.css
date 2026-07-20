@@ -1,0 +1,57 @@
+/*====================================
+        BOTÃO FLUTUANTE
+====================================*/
+
+.btn-contato{
+
+    position: fixed;
+
+    right: 30px;
+
+    bottom: 40px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-decoration: none;
+
+    box-shadow: var(--shadow-lg);
+
+    z-index: 9999;
+
+    transition: .35s ease;
+
+}
+
+/*====================================
+            IMAGEM
+====================================*/
+
+.btn-contato img{
+
+    width: 42px;
+
+    transition: .35s;
+
+}
+
+/*====================================
+            HOVER
+====================================*/
+
+.btn-contato:hover{
+
+    transform: translateY(-6px);
+
+}
+
+.btn-contato:hover img{
+
+    transform: scale(1.08);
+
+}

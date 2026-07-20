@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FAVICON SITE -->
+     <link rel="shortcut icon" href="./src/favicon/FL.svg" type="image/x-icon">
+    <!-- IMPORT DOS ICONES -->
+     <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- LINK dos CSS -->
+     <link rel="stylesheet" href="./src/style/global.css">
+    <title>FLBBQ</title>
+</head>
+<body>
+    
+    <header id="header"></header>
+
+    <main class="main-banner">
+
+        <div class="main-conteiner">
+
+            <!-- Slider -->
+
+            <div class="banner-slider">
+
+                <img src="./src/assets/imgs/banners/banner1.jpg" class="slide active">
+                <img src="./src/assets/imgs/banners/banner2.jpg" class="slide">
+                <img src="./src/assets/imgs/banners/banner3.jpg" class="slide">
+                <img src="./src/assets/imgs/banners/banner4.jpg" class="slide">
+
+            </div>
+
+            <!-- Overlay -->
+
+            <div class="banner-overlay"></div>
+
+            <!-- Botões -->
+
+            <button class="banner-btn prev">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+
+            <button class="banner-btn next">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+
+            <!-- Conteúdo -->
+
+            <div class="main-content">
+
+                <h2>
+                    OUTDOOR DE VERDADE
+                    <span>SE VIVE, NÃO SE EXPLICA</span>
+                </h2>
+
+                <p>
+                    Equipamentos e acessórios das melhores marcas para sua aventura.
+                </p>
+
+                <button href="#destaques">
+
+                    <a href="#destaques">VER PRODUTOS</a>
+
+                    <i class="fa-solid fa-chevron-right"></i>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <div class="banner-info">
+
+        <div class="info-item">
+
+            <i class="fa-solid fa-truck"></i>
+
+            <div>
+
+                <h4>ENVIO PARA TODO BRASIL</h4>
+
+                <p>Com agilidade e segurança</p>
+
+            </div>
+
+        </div>
+
+        <div class="info-item">
+
+            <i class="fa-regular fa-credit-card"></i>
+
+            <div>
+
+                <h4>PARCELE EM ATÉ 12X</h4>
+
+                <p>No cartão de crédito</p>
+
+            </div>
+
+        </div>
+
+        <div class="info-item">
+
+            <i class="fa-regular fa-gem"></i>
+
+            <div>
+
+                <h4>DESCONTO NO PIX</h4>
+
+                <p>5% de desconto</p>
+
+            </div>
+
+        </div>
+
+        <div class="info-item">
+
+            <i class="fa-solid fa-shield-halved"></i>
+
+            <div>
+
+                <h4>COMPRA 100% SEGURA</h4>
+
+                <p>Seus dados protegidos</p>
+
+            </div>
+
+        </div>
+
+    </div>
+    <section id="categorias">
+
+        <h2 class="categoria-title">Categorias</h2>
+
+        <div class="categoria-container">
+
+            <div class="categoria" onclick="categoria('bone')">
+                <div class="categoria-img">
+                    <img src="./src/assets/imgs/categorias/BONE.png" alt="Boné">
+                </div>
+                <h3>Bonés Importados</h3>
+            </div>
+
+            <div class="categoria">
+                <div class="categoria-img" onclick="categoria('mochila')">
+                    <img src="./src/assets/imgs/categorias/BOUSA_MOCHILA.png" alt="Mochila">
+                </div>
+                <h3>Bolsas e Mochilas</h3>
+            </div>
+
+            <div class="categoria" onclick="categoria('vestuario')">
+                <div class="categoria-img">
+                    <img src="./src/assets/imgs/categorias/VESTUARIO.png" alt="Vestuário">
+                </div>
+                <h3>Vestuário</h3>
+            </div>
+
+            <div class="categoria" onclick="categoria('termico')">
+                <div class="categoria-img">
+                    <img src="./src/assets/imgs/categorias/TERMICOS.png" alt="Térmico">
+                </div>
+                <h3>Térmicos</h3>
+            </div>
+
+            <div class="categoria" onclick="categoria('terere')">
+                <div class="categoria-img">
+                    <img src="./src/assets/imgs/categorias/ERVA.png" alt="Tereré">
+                </div>
+                <h3>Ervas para Tereré</h3>
+            </div>
+
+            <div class="categoria" onclick="categoria('abridor')">
+                <div class="categoria-img">
+                    <img src="./src/assets/imgs/categorias/ABRIDOR_GARRAFA.png" alt="Abridor">
+                </div>
+                <h3>Abridores</h3>
+            </div>
+
+            <div class="categoria" onclick="categoria('cerveja')">
+                <div class="categoria-img">
+                    <img src="./src/assets/imgs/categorias/CERVEJA.png" alt="Cerveja">
+                </div>
+                <h3>Cerveja</h3>
+            </div>
+
+            <div class="categoria">
+                <div class="categoria-img" onclick="categoria('cadeira')">
+                    <img src="./src/assets/imgs/categorias/CADEIRAS_DECORACAO.png" alt="Cadeira">
+                </div>
+                <h3>Cadeiras</h3>
+            </div>
+
+            <div class="categoria" id="TodasCategorias">
+
+                <div class="categoria-img" onclick="categoria('todos')">
+
+                    <img
+                        id="imgTodasCategorias"
+                        src="./src/assets/imgs/categorias/CUTELEIRA.png"
+                        alt="Todas as categorias"
+                    >
+
+                </div>
+
+                <h3>Todas</h3>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="destaques">
+
+        <div class="container">
+
+            <div class="section-header">
+
+                <h2>Destaques</h2>
+
+                <a href="#">Ver todos</a>
+
+            </div>
+
+            <div class="produtos">
+
+                <!-- Produto -->
+
+                <a href="produto.html?id=1" class="link-produto">
+
+                    <article class="card-produto">
+
+                        <span class="status mais-vendido">Mais Vendido</span>
+
+                        <div class="image-produto">
+
+                            <img src="./src/assets/imgs/produtos/Bone-Columbia-PFG.png" alt="Boné Columbia PFG">
+
+                        </div>
+
+                        <div class="info-produto">
+
+                            <h3>
+                                Boné Columbia Importado PFG
+                            </h3>
+
+                            <div class="avaliacao">
+                                ★★★★★
+                                <span>(498)</span>
+                            </div>
+
+                            <div class="preco">
+                                R$ 259,90
+                            </div>
+
+                            <div class="parcelas">
+                                ou 12x de R$ 21,66
+                            </div>
+
+                            <div class="pix">
+                                5% OFF no PIX
+                            </div>
+
+                            <button>
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                Comprar
+                            </button>
+
+                        </div>
+
+                    </article>
+
+                </a>
+
+                <!-- Repita os outros produtos -->
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="marcas">
+
+        <div class="container">
+
+            <div class="section-header">
+
+                <h2>Marcas Parceiras</h2>
+
+            </div>
+
+            <div class="marcas-slider">
+
+                <div class="marcas-track">
+
+                    
+                    <a href="https://www.basspro.com/home" class="marca" target="_blank">
+                        <img src="./src/assets/imgs/marcas/bassproshops.png" alt="Bass Pro Shops">
+                    </a>
+
+                    <a href="https://www.columbiasportswear.com.br/" class="marca" target="_blank">
+                        <img src="./src/assets/imgs/marcas/columbia.png" alt="Columbia">
+                    </a>
+
+                    <a href="https://www.yeti.com/" class="marca" target="_blank">
+                        <img src="./src/assets/imgs/marcas/yeti.png" alt="YETI">
+                    </a>
+
+                    <a href="https://www.guinness.com/" class="marca" target="_blank">
+                        <img src="./src/assets/imgs/marcas/guinness.png" alt="Guinness">
+                    </a>
+
+                    <a href="https://trots.com.br/" class="marca" target="_blank">
+                        <img src="./src/assets/imgs/marcas/trots.png" alt="Trots">
+                    </a>
+
+                    <a href="https://www.budlight.com/" class="marca" target="_blank">
+                        <img src="./src/assets/imgs/marcas/budlight.png" alt="Bud Light">
+                    </a>
+
+                    <a href="https://www.browning.com/" class="marca">
+                        <img src="./src/assets/imgs/marcas/bronwning.png" alt="Browning">
+                    </a>
+
+                    <a href="https://www.cabelas.com/" class="marca">
+                        <img src="./src/assets/imgs/marcas/cabelas.png" alt="Cabelas">
+                    </a>
+
+                    <a href="https://www.coleman.com/" class="marca">
+                        <img src="./src/assets/imgs/marcas/coleman.png" alt="Coleman">
+                    </a>
+
+                    <a href="https://www.coors.com/" class="marca">
+                        <img src="./src/assets/imgs/marcas/coors.png" alt="Coors">
+                    </a>
+
+                    <a href="https://kershaw.kaiusa.com/" class="marca">
+                        <img src="./src/assets/imgs/marcas/kershaw.png" alt="Kershaw">
+                    </a>
+
+                    <a href="https://www.millerhighlife.com/" class="marca">
+                        <img src="./src/assets/imgs/marcas/miller.png" alt="Miller">
+                    </a>
+
+                    <a href="https://www.modelousa.com/" class="marca">
+                        <img src="./src/assets/imgs/marcas/modelo.png" alt="Modelo">
+                    </a>
+
+                    
+                    <a href="https://www.basspro.com/home" class="marca" target="_blank">
+                        <img src="./src/assets/imgs/marcas/bassproshops.png" alt="Bass Pro Shops">
+                    </a>
+
+                    <a href="https://www.columbiasportswear.com.br/" class="marca" target="_blank">
+                        <img src="./src/assets/imgs/marcas/columbia.png" alt="Columbia">
+                    </a>
+
+                    <a href="https://www.yeti.com/" class="marca" target="_blank">
+                        <img src="./src/assets/imgs/marcas/yeti.png" alt="YETI">
+                    </a>
+
+                    <a href="https://www.guinness.com/" class="marca" target="_blank">
+                        <img src="./src/assets/imgs/marcas/guinness.png" alt="Guinness">
+                    </a>
+
+                    <a href="https://trots.com.br/" class="marca" target="_blank">
+                        <img src="./src/assets/imgs/marcas/trots.png" alt="Trots">
+                    </a>
+
+                    <a href="https://www.budlight.com/" class="marca" target="_blank">
+                        <img src="./src/assets/imgs/marcas/budlight.png" alt="Bud Light">
+                    </a>
+
+                    <a href="https://www.browning.com/" class="marca">
+                        <img src="./src/assets/imgs/marcas/bronwning.png" alt="Browning">
+                    </a>
+
+                    <a href="https://www.cabelas.com/" class="marca">
+                        <img src="./src/assets/imgs/marcas/cabelas.png" alt="Cabelas">
+                    </a>
+
+                    <a href="https://www.coleman.com/" class="marca">
+                        <img src="./src/assets/imgs/marcas/coleman.png" alt="Coleman">
+                    </a>
+
+                    <a href="https://www.coors.com/" class="marca">
+                        <img src="./src/assets/imgs/marcas/coors.png" alt="Coors">
+                    </a>
+
+                    <a href="https://kershaw.kaiusa.com/" class="marca">
+                        <img src="./src/assets/imgs/marcas/kershaw.png" alt="Kershaw">
+                    </a>
+
+                    <a href="https://www.millerhighlife.com/" class="marca">
+                        <img src="./src/assets/imgs/marcas/miller.png" alt="Miller">
+                    </a>
+
+                    <a href="https://www.modelousa.com/" class="marca">
+                        <img src="./src/assets/imgs/marcas/modelo.png" alt="Modelo">
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    
+    <footer id="footer"></footer>
+    <script type="module" src="./src/assets/JS/main.js"></script>
+    <script src="./src/assets/JS/categorias/script.js"></script>
+</body>
+</html>

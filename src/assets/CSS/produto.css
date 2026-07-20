@@ -1,0 +1,523 @@
+main{
+    margin: 20vh 0 2vh;
+    display: flex;
+    align-items: baseline;
+    flex-direction: column;
+}
+
+#categoria-produto{
+    padding-left: 4vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+#categoria-produto p{
+    font-size:.7rem;
+}
+
+#produto{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    padding-left: 12vh;
+    gap: 5vh;
+}
+
+.produto-imgs{
+    padding-bottom: 5vh;
+    display:flex;
+    gap:10px;
+
+}
+
+.imgs{
+    height: 95%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+    gap:10px;
+    padding-top: 10vh;
+}
+
+.imgs img{
+
+    width:90px;
+    height:90px;
+
+    object-fit:cover;
+
+    border-radius: var(--radius-lg);
+
+    cursor:pointer;
+
+    background-color: #fff;
+
+    border:2px solid transparent;
+
+    transition:.5s;
+
+}
+
+.imgs img:hover{
+
+    border-color: var(--color-secondary-hover);
+    opacity: 0.9;
+
+}
+
+.img-mostrando{
+    width: 75vh;
+    padding:30px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.img-mostrando img{
+
+    width:100%;
+    max-width:650px;
+    border-radius: var(--radius-lg);
+    background-color: #fff;
+    transition:.5s;
+
+}
+
+.img-mostrando img:hover{
+
+    transform:scale(1.01);
+
+}
+
+/* =========================
+   VANTAGENS
+========================= */
+
+.vantagens{
+
+    background: var(--houver-bg);
+
+    border-radius:18px;
+
+    display:flex;
+
+    justify-content:space-evenly;
+
+    align-items:center;
+
+    padding:18px;
+
+    gap:15px;
+
+}
+
+.vantagens span{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    font-size:.92rem;
+
+    color:var(--principal-texto-cor);
+
+}
+
+.vantagens i{
+
+    color:var(--color-secondary);
+
+}
+
+.produto-info{
+
+    margin-top: 4.5vh;
+    display:flex;
+    height: auto;
+    flex-direction:column;
+    gap:8px;
+
+}
+
+.tag{
+
+    width:max-content;
+
+    padding:5px 10px;
+
+    border-radius: var(--radius-sm);
+
+    background: var(--color-secondary);
+
+    color: var(--gray-light);
+
+    font-weight:600;
+
+    text-transform:uppercase;
+
+    font-size:.7rem;
+
+}
+
+.sobre{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.produto-info h1{
+
+    font-size:1.8rem;
+    line-height:1.4;
+    text-transform: uppercase;
+
+}
+
+.produto-info h2{
+
+    color: var(--aviso);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    font-size:1.2rem;
+    font-weight:500;
+
+}
+
+.produto-info h2 i{
+    font-size: .7rem;
+    color: var(--principal-texto-cor);
+}
+
+.sobre p{
+    font-size: small;
+    color: var(--principal-texto-cor);
+}
+
+.produto-info h3{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+    color: var(--principal-texto-cor);
+
+    gap: 3px;
+
+    font-family: Sora;
+
+    font-size:2.5rem;
+
+    font-weight:700;
+
+}
+
+.pix{
+
+    color: var(--sucesso);
+
+    font-size:.7rem;
+
+    font-weight:600;
+
+}
+
+/* =====================================
+            TERMOS
+===================================== */
+
+.termos{
+
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+
+    gap:8px;
+
+    position:relative;
+
+}
+
+/* Linha do checkbox */
+
+.termos div{
+
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+}
+
+/* Checkbox */
+
+.termos input{
+
+    width:18px;
+    height:18px;
+
+    cursor:pointer;
+
+    accent-color:var(--color-secondary);
+
+}
+
+/* Link */
+
+.termos a{
+
+    position:relative;
+
+    color:var(--principal-texto-cor);
+
+    font-size:.88rem;
+
+    font-weight:500;
+
+    transition:.25s;
+
+}
+
+.termos a:hover{
+
+    color:var(--color-secondary-hover);
+    text-decoration: underline;
+
+}
+
+/* Tooltip */
+
+.termos p{
+
+    position:absolute;
+
+    top:34px;
+    left:28px;
+
+    width:280px;
+
+    padding:10px 14px;
+
+    background:var(--houver-bg);
+
+    border:1px solid var(--color-secondary-dark);
+
+    border-radius:12px;
+
+    color:var(--principal-texto-cor);
+
+    font-size:.75rem;
+
+    line-height:1.5;
+
+    box-shadow:var(--shadow-md);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transform:translateY(8px);
+
+    transition:.25s;
+
+    pointer-events:none;
+
+    z-index:10;
+
+}
+
+/* Pequena seta */
+
+.termos p::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-6px;
+    left:18px;
+
+    width:12px;
+    height:12px;
+
+    background:var(--houver-bg);
+
+    border-top:1px solid var(--color-secondary-dark);
+
+    border-left:1px solid var(--color-secondary-dark);
+
+    transform:rotate(45deg);
+
+}
+
+/* Mostrar tooltip */
+
+.termos a:hover + p{
+
+    opacity:1;
+
+    visibility:visible;
+
+    transform:translateY(0);
+
+}
+
+.produto-info button{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 10px;
+
+    padding:12px;
+
+    font-size:.9rem;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.5s;
+
+    border:none;
+
+    border-radius: var(--radius-lg);
+
+}
+
+.btnCompra{
+    color: var(--gray-light);
+
+    margin-top:10px;
+
+    background-color: var(--color-secondary);
+}
+
+.btnCompra:hover{
+
+    background: var(--color-secondary-hover);
+
+    transform:translateY(-2px);
+
+    box-shadow:0 12px 25px rgba(160, 121, 13, 0.041);
+
+}
+
+.btnCarrinho{
+    margin: 1vh 0;
+    color: var(--gray-light);
+    background-color: var(--rgba-lg);
+}
+
+.btnCarrinho:hover{
+    color: var(--gray-light);
+    background-color: var(--rgba-md);
+}
+
+/* =========================
+   FRETE
+========================= */
+
+.frete{
+
+    margin-top:12px;
+
+    background: var(--houver-bg);
+
+    border:1.5px solid var(--color-secondary-dark);
+
+    border-radius: var(--radius-lg);
+
+    padding:22px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.frete h4{
+
+    display:flex;
+
+    align-items:center;
+
+    color: var(--principal-texto-cor);
+
+    gap:10px;
+
+    font-size:.8rem;
+
+}
+
+.frete a{
+    font-size: .75rem;
+    text-decoration: underline;
+    color: var(--color-secondary);
+}
+
+.frete .input{
+
+    display:flex;
+
+    gap:15px;
+
+}
+
+.frete input{
+
+    flex:1;
+
+    padding:16px;
+
+    border-radius:14px;
+
+    border:1px solid var(--rgba-md);
+
+    box-shadow: var(--shadow-md);
+
+    background:transparent;
+
+    color: var(--principal-texto-cor);
+
+    font-size:.8rem;
+
+}
+
+
+.frete .links{
+
+    display:flex;
+
+    gap:30px;
+
+    font-size:.75rem;
+
+}
+
+.frete .links a{
+
+    color:var(--color-secondary);
+
+}
+
+.frete .links a:hover{
+
+    text-decoration:underline;
+
+}
+
+
+
+
+
+
+
+
