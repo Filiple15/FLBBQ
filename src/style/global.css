@@ -1,95 +1,152 @@
-/* IMPORTANDO AS FONTES PARA O PROJETO */
+/* ---------------------------------
+    IMPORTS DOS ELEMENTOS VISUAIS
+--------------------------------- */
+@import url(../components/header/style.css); /* CSS DO HEADER */
+@import url(../components/footer/style.css); /* CSS DO FOOTER */
+@import url(../assets/CSS/banner.css); /* CSS DO BANNER */
+@import url(../../src/assets/CSS/categorias.css); /* CSS DAS CATEGORIAS IMG */
+@import url(../../src/assets/CSS/produtos.css); /* CSS DA PARTE DE LISTAGEM DE PRODUTOS */
+@import url(../assets/CSS/marcas.css); /* CSS DAS MARCAS PARCEIRAS */
+
+
+/* ---------------------------------
+    FONTS PRINCIPAIS DO SITE
+--------------------------------- */
 @font-face {
-    font-family: Poppins;
+    font-family: "Poppins";
     src: url(../assets/fonts/Poppins/Poppins-Regular.ttf);
 }
 @font-face {
-    font-family: Sora;
+    font-family: "Sora";
     src: url(../assets/fonts/Sora/static/Sora-Regular.ttf);
 }
 
-/* ====================================
-   DESIGN SYSTEM
-==================================== */
-
 :root{
 
-    /*====================================
-                CORES
-    ====================================*/
+    /*==================================================
+                        CORES BASE
+    ==================================================*/
 
-    --gold: #C9A227;
-    --gold-hover: #D8B53B;
-    --gold-light: #E8C75A;
+    /* Fundo principal do site */
+    --principal-bg: #111111;
 
-    --black: #0D0D0D;
-    --black-light: #111010;
-    --black-soft: #131212;
+    /* Fundo para hover e elementos ativos */
+    --houver-bg: #1c1b1b;
 
-    --white: #F5F5F5;
+    /* Fundo de cards, header, footer e menus */
+    --invertido-bg: #F4F1E8;
 
-    --gray: #E5E5E5;
-    --gray-light: #F8F8F8;
-    --gray-dark: #BDBDBD;
+    /*==================================================
+                        TEXTOS
+    ==================================================*/
 
-    --success: #2ECC71;
-    --danger: #E74C3C;
+    /* Cor principal dos títulos */
+    --principal-texto-cor: #F1F1F1;
 
-    /*====================================
-                FONTES
-    ====================================*/
+    /* Texto sobre fundos claros */
+    --invertido-texto-cor: #181818;
+    
+    --gray: #303030;
+    --gray-light: #ececec;
 
-    --font-primary: "Poppins", sans-serif;
-    --font-secund: "Sora", sans-serif;
+    /*==================================================
+                    CORES DA MARCA
+    ==================================================*/
 
-    /*====================================
-                TAMANHOS
-    ====================================*/
+    /* COR SECUNDARIA ELEMENTS SITE */
+    --color-secondary: #587a22;
+    --color-secondary-hover: #618d1f;
+    --color-secondary-light: #79af37;
+    --color-secondary-dark: #233709;
 
-    --container-width: 1400px;
+    /*==================================================
+                CORES DE DESTAQUE
+    ==================================================*/
 
-    --top-bar-height: 32px;
-    --header-height: 70px;
-    --menu-height: 48px;
+    /* COR PRINCIPAL ELEMENTS SITE */
+    --color-primary: #764714;
+    --color-primary-hover: #995f26;
+    --color-primary-light: #b36f2c;
+    --color-primary-dark: #4c2c08;
 
-    --search-height: 42px;
-    --button-height: 48px;
 
-    /*====================================
-                BORDAS
-    ====================================*/
 
-    --radius-sm: 4px;
-    --radius-md: 8px;
-    --radius-lg: 12px;
-    --radius-full: 50%;
+    /*==================================================
+                        STATUS
+    ==================================================*/
 
-    /*====================================
-                SOMBRAS
-    ====================================*/
+    /* Sucesso */
+    --sucesso: #17af3d;
 
-    --shadow-sm: 0 2px 8px rgba(0,0,0,.15);
-    --shadow-md: 0 4px 15px rgba(0,0,0,.20);
-    --shadow-lg: 0 8px 25px rgba(0,0,0,.25);
+    /* Erro */
+    --erro: #9e1313;
 
-    /*====================================
-                TRANSIÇÕES
-    ====================================*/
+    /* Aviso */
+    --aviso: #b97d15;
 
-    --transition-fast: .2s;
-    --transition-normal: .3s;
-    --transition-slow: .5s;
+    /* Informação */
+    --info: #1961ae;
 
-    /*====================================
-                ESPAÇAMENTOS
-    ====================================*/
 
-    --space-xs: .5rem;
-    --space-sm: .75rem;
-    --space-md: 1rem;
-    --space-lg: 1.5rem;
-    --space-xl: 2rem;
-    --space-2xl: 3rem;
+
+    /*==================================================
+                        FONTES
+    ==================================================*/
+
+    /* Fonte dos títulos */
+    --font-principal: "Poppins", sans-serif;
+
+    /* Fonte dos textos */
+    --font-secundaria: "Sora", sans-serif;
+
+
+
+    /*==================================================
+                        BORDAS
+    ==================================================*/
+
+    /* Pequena */
+    --radius-sm: 6px;
+
+    /* Média */
+    --radius-md: 10px;
+
+    /* Grande */
+    --radius-lg: 16px;
+
+    /* Circular */
+    --radius-full: 999px;
+
+
+
+    /*==================================================
+                        SOMBRAS
+    ==================================================*/
+
+    /* Pequena */
+    --shadow-sm: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;;
+
+    /* Média */
+    --shadow-md: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;;
+
+    /* Grande */
+    --shadow-lg: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;;
+
+
+
+    /*==================================================
+                        TRANSIÇÕES
+    ==================================================*/
+
+    /* Rápida */
+    --transicao-sm: .2s;
+
+    /* Normal */
+    --transicao-md: .3s;
+
+    /* Lenta */
+    --transicao-lg: .5s;
+
 }
 
 /*====================================
@@ -100,6 +157,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: var(--font-principal);
 }
 
 html{
@@ -126,7 +184,7 @@ button{
 input{
     border: none;
     outline: none;
-    font-family: inherit;
+    font-family: var(--font-secundaria);
 }
 
 ul{
@@ -134,7 +192,7 @@ ul{
 }
 
 hr{
-    border: 1px solid var(--gold);
+    border: 1px solid var(--principal-texto-cor);
 }
 
 
@@ -145,8 +203,8 @@ hr{
 body{
     width: auto;
     height: auto;
-    font-family: var(--font-primary);
-    background: var(--black);
+    color: var(--principal-texto-cor);
+    background: var(--principal-bg);
 }
 
 /* Container central da página */
@@ -156,8 +214,9 @@ body{
 }
 
 main{
-    margin-top: 3vh;
+    margin-top: 2vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: var(--transicao-lg);
 }

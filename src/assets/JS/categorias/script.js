@@ -2,6 +2,47 @@
         TODAS AS CATEGORIAS
 ====================================*/
 
+function categoria(categoria){
+    let cat = categoria.toLowerCase()
+
+    switch (cat){
+        case "bone":
+                console.log(`Categoria selecionada: ${cat}`)
+                break
+        case "mochila":
+                console.log(`Categoria selecionada: ${cat}`)
+                break
+        case "vestuario":
+                console.log(`Categoria selecionada: ${cat}`)
+                break
+        case "termico":
+                console.log(`Categoria selecionada: ${cat}`)
+                break
+        case "terere":
+                console.log(`Categoria selecionada: ${cat}`)
+                break
+        case "abridor":
+                console.log(`Categoria selecionada: ${cat}`)
+                break
+        case "cerveja":
+                console.log(`Categoria selecionada: ${cat}`)
+                break
+        case "cadeira":
+                console.log(`Categoria selecionada: ${cat}`)
+                break
+        case "todos":
+                console.log(`Categoria selecionada: ${cat}`)
+                break
+        default:
+                console.error("Categoria não identificada !!")
+    }
+}
+
+
+
+/* ------------------------------------
+        MAIS CATEGORIAS DISPONIVEIS
+------------------------------------ */
 // Pega a imagem
 
 const imgTodasCategorias = document.getElementById("imgTodasCategorias");
@@ -61,3 +102,4 @@ function trocarImagemCategoria(){
 ====================================*/
 
 setInterval(trocarImagemCategoria,2500);
+

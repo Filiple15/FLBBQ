@@ -1,41 +1,33 @@
-function categoria(categoria){
-    let cat = categoria.toLowerCase()
+/* ------------------------------------
+    JavaScript principal do projeto
+------------------------------------ */
 
-    if(cat === "bone"){
-        
+import { carregarComponentes } from "./components/components.js";
+import { iniciarTema } from "./components/btnTema.js";
+import { iniciarLogo } from "./components/logo.js";
+
+import "./banner/script.js";
+
+async function iniciarSite(){
+
+    try{
+
+        await carregarComponentes();
+
+        iniciarTema();
+
+        iniciarLogo();
+
+        console.log("Site iniciado com sucesso.");
+
     }
-    else if(cat === "vestuario"){
-        
+
+    catch(erro){
+
+        console.error("Erro ao iniciar o site:", erro);
+
     }
-    else if(cat === "termico"){
-        
-    }
-    else if(cat === "cerveja"){
-        
-    }
-    else if(cat === "abridor"){
-        
-    }
-    else if(cat === "mochila"){
-        
-    }
-    else if(cat === "cadeira"){
-        
-    }
-    else if(cat === "terere"){
-        
-    }
-    else if(cat === "todos"){
-        
-    }
-    else{
-        console.error("Categoria não encontrada");
-        alert('Erro na categoria')
-    }
+
 }
 
-// PESQUISA DE PRODUTO
-function procurar(){
-    let procura = String(document.querySelector(".search-box input").value)
-    alert(procura)
-}
+iniciarSite();

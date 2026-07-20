@@ -1,0 +1,677 @@
+@import url(../../assets/CSS/contato.css);
+@import url(../../assets/CSS/btnTema.css);
+
+
+/* =========================
+   HEADER SUPERIOR
+========================= */
+
+header{
+    display: block;
+    max-height: 40%;
+}
+
+.header-top{
+    display: none;
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+/*
+   Flex:
+   Coloca os elementos lado a lado
+*/
+.header-top .container{
+    display:flex;
+
+    /* um grupo à esquerda e outro à direita */
+    justify-content:space-between;
+
+    /* centraliza verticalmente */
+    align-items:center;
+
+    /* altura menor */
+    min-height: 20px;
+}
+
+/* Telefones e links */
+.header-contact,
+.header-user-links{
+    display:flex;
+    flex-direction: row;
+    gap: 18px;
+}
+
+/* Links da barra superior */
+.header-top a{
+    text-decoration:none;
+    font-size:0.75rem;
+    transition: var(--transicao-sm);
+}
+
+.header-top a:hover{
+    color: var(--color-secondary-hover);
+}
+
+/* =========================
+   HEADER PRINCIPAL
+========================= */
+
+.header-main{
+    /* altura reduzida */
+    padding:12px 0;
+}
+
+/*
+   Grid:
+   Logo | Busca | Ações
+*/
+.header-main .container{
+    display:grid;
+
+    /*
+       90px para logo
+       1fr ocupa todo espaço restante
+       auto ajusta ações
+    */
+    grid-template-columns:90px 1fr auto;
+
+    gap:25px;
+
+    align-items:center;
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.logo img{
+    width: 100%;
+}
+
+/* =========================
+   BUSCA
+========================= */
+
+.search-box{
+    display:flex;
+    overflow:hidden;
+    border-radius: var(--radius-lg);
+}
+
+/*
+   Campo ocupa todo espaço disponível
+*/
+.search-box input{
+    width:100%;
+    height: 40px;
+
+    border: none;
+    outline:none;
+
+    padding:0 15px;
+
+    font-family: var(--font-principal);
+    font-size: 1rem;
+}
+
+/* Botão da lupa */
+.search-box button{
+    width: 50px;
+
+    border:none;
+
+    background: var(--color-secondary);
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.search-box button:hover{
+    background: var(--color-secondary-hover);
+}
+
+/* =========================
+   AÇÕES
+========================= */
+
+.header-actions{
+    display:flex;
+    gap:20px;
+}
+
+/* Login e Carrinho */
+.account,
+.cart{
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    text-decoration:none;
+
+    color: var(--principal-texto-cor);
+
+    position:relative;
+}
+
+/* Texto principal */
+.account span,
+.cart span{
+    display:block;
+
+    font-family: var(--font-secundaria);
+    font-size:.7rem;
+
+    font-weight:600;
+}
+
+/* Texto secundário */
+.account small,
+.cart small{
+    display:block;
+
+    font-size:.7rem;
+    color: var(--principal-texto-cor);
+}
+
+.cart span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* =========================
+   BADGE CARRINHO
+========================= */
+
+.cart-badge{
+    position:absolute;
+
+    top:-5px;
+    right:-8px;
+
+    width:18px;
+    height:18px;
+
+    border-radius:50%;
+
+    background: var(--color-secondary-hover);
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+    flex-direction: row;
+    gap: 20px;
+
+    color:#000;
+
+    font-size:.65rem;
+
+    font-weight:700;
+}
+
+/* =========================
+   MENU
+========================= */
+
+.navbar{
+    display: none;
+}
+
+/* Lista horizontal */
+.navbar ul{
+    display:flex;
+
+    justify-content:space-between;
+
+    list-style:none;
+}
+
+/* Links menu */
+.navbar a{
+    display:block;
+
+    padding:14px 0;
+
+    color: var(--principal-texto-cor);
+
+    text-decoration:none;
+
+    text-transform:uppercase;
+
+    font-family: var(--font-secundaria);
+
+    font-size:.78rem;
+
+    font-weight:600;
+
+    transition: var(--transicao-sm);
+}
+
+.navbar a:hover{
+    color: var(--color-secondary);
+}
+
+/* -------------------------------
+    ESTILO EM QUE O HEADER AGE
+------------------------------- */
+
+#header{
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    z-index: 9999;
+
+    background: var(--principal-bg);
+
+    transform: translateY(0);
+
+    transition:
+        transform .45s cubic-bezier(.22,.61,.36,1),
+        box-shadow .35s ease,
+        background-color .35s ease;
+
+    will-change: transform;
+}
+
+/* Header escondido */
+
+#header.ocultar{
+    transform: translateY(-100%);
+}
+
+/* Quando houver scroll */
+
+#header.rolando{
+    box-shadow: 0 6px 20px rgba(0,0,0,.15);
+}
+
+/*====================================
+            BOTÃO MENU
+====================================*/
+
+.menu-mobile-btn{
+
+    display: none;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 44px;
+    height: 44px;
+
+    border: none;
+    outline: none;
+
+    border-radius: var(--radius-md);
+
+    background: transparent;
+
+    color: var(--principal-texto-cor);
+
+    cursor: pointer;
+
+    transition: var(--transicao-sm);
+
+}
+
+.menu-mobile-btn i{
+
+    font-size: 1.3rem;
+
+    transition: var(--transicao-sm);
+
+}
+
+.menu-mobile-btn:hover{
+
+    background: var(--houver-bg);
+
+    color: var(--color-secondary);
+
+}
+
+/*====================================
+            MENU MOBILE
+====================================*/
+
+.menu-mobile{
+
+    position: fixed;
+
+    top: 0;
+    right: -380px;
+
+    width: 340px;
+    max-width: 92%;
+
+    height: 100vh;
+
+    background: var(--principal-bg);
+
+    display: flex;
+    flex-direction: column;
+
+    box-shadow: -10px 0 40px rgba(0,0,0,.35);
+
+    overflow-y: auto;
+
+    transition: right .35s ease;
+
+    z-index: 999999;
+
+}
+
+.menu-mobile.ativo{
+
+    right: 0;
+
+}
+
+/*====================================
+        SCROLL PERSONALIZADO
+====================================*/
+
+.menu-mobile::-webkit-scrollbar{
+
+    width: 6px;
+
+}
+
+.menu-mobile::-webkit-scrollbar-thumb{
+
+    background: var(--color-secondary);
+
+    border-radius: 999px;
+
+}
+
+/*====================================
+        CABEÇALHO
+====================================*/
+
+.menu-mobile-header{
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 22px;
+
+    min-height: 80px;
+
+    border-bottom: 1px solid rgba(255,255,255,.08);
+
+}
+
+.menu-mobile-header h3{
+
+    margin: 0;
+
+    font-family: var(--font-principal);
+
+    font-size: 1.25rem;
+
+    font-weight: 600;
+
+    color: var(--principal-texto-cor);
+
+}
+
+.menu-mobile-close{
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 42px;
+    height: 42px;
+
+    border: none;
+
+    border-radius: var(--radius-full);
+
+    background: transparent;
+
+    color: var(--principal-texto-cor);
+
+    cursor: pointer;
+
+    transition: var(--transicao-sm);
+
+}
+
+.menu-mobile-close:hover{
+
+    background: var(--houver-bg);
+
+    color: var(--color-secondary);
+
+}
+
+.menu-mobile-close i{
+
+    font-size: 1.45rem;
+
+}
+
+/*====================================
+            LINKS
+====================================*/
+
+.menu-mobile a{
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+
+    width: 100%;
+
+    min-height: 58px;
+
+    padding: 0 22px;
+
+    text-decoration: none;
+
+    color: var(--principal-texto-cor);
+
+    font-family: var(--font-secundaria);
+
+    font-size: .95rem;
+
+    transition: var(--transicao-sm);
+
+}
+
+.menu-mobile a:hover{
+
+    background: var(--houver-bg);
+
+    color: var(--color-secondary);
+
+    padding-left: 28px;
+
+}
+
+.menu-mobile a i{
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 26px;
+
+    font-size: 1.15rem;
+
+    color: var(--color-secondary);
+
+    flex-shrink: 0;
+
+}
+
+.menu-mobile a span{
+
+    display: block;
+
+    font-size: .95rem;
+
+    color: inherit;
+
+}
+
+/*====================================
+            HR
+====================================*/
+
+.menu-mobile hr{
+
+    margin: 10px 22px 18px;
+
+    border: none;
+
+    border-top: 1px solid rgba(255,255,255,.08);
+
+}
+
+/*====================================
+        OVERLAY
+====================================*/
+
+.menu-overlay{
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0,0,0,.55);
+
+    backdrop-filter: blur(5px);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition:
+        opacity .3s ease,
+        visibility .3s ease;
+
+    z-index: 999998;
+
+}
+
+.menu-overlay.ativo{
+
+    opacity: 1;
+
+    visibility: visible;
+
+}
+
+/*====================================
+        ANIMAÇÃO
+====================================*/
+
+.menu-mobile.ativo{
+
+    animation: abrirMenu .35s ease;
+
+}
+
+@keyframes abrirMenu{
+
+    from{
+
+        transform: translateX(30px);
+
+        opacity: .8;
+
+    }
+
+    to{
+
+        transform: translateX(0);
+
+        opacity: 1;
+
+    }
+
+}
+
+.menu-mobile.ativo a{
+
+    opacity: 0;
+
+    animation: aparecerItem .35s forwards;
+
+}
+
+.menu-mobile.ativo a:nth-of-type(1){animation-delay:.08s;}
+.menu-mobile.ativo a:nth-of-type(2){animation-delay:.12s;}
+.menu-mobile.ativo a:nth-of-type(3){animation-delay:.16s;}
+.menu-mobile.ativo a:nth-of-type(4){animation-delay:.20s;}
+.menu-mobile.ativo a:nth-of-type(5){animation-delay:.24s;}
+
+@keyframes aparecerItem{
+
+    from{
+
+        opacity: 0;
+
+        transform: translateX(18px);
+
+    }
+
+    to{
+
+        opacity: 1;
+
+        transform: translateX(0);
+
+    }
+
+}
+
+/*====================================
+            RESPONSIVO
+====================================*/
+
+@media (max-width: 992px){
+
+    .menu-mobile-btn{
+
+        display: flex;
+
+    }
+
+}
+
+@media (max-width: 768px){
+
+    .menu-mobile{
+
+        width: 320px;
+
+    }
+
+}
+
+@media (max-width: 576px){
+
+    .menu-mobile{
+
+        width: 100%;
+        max-width: 100%;
+
+    }
+
+}

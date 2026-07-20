@@ -7,6 +7,8 @@
     width:98%;
     height: 60vh;
 
+    margin-top: 17vh;
+
     position:relative;
 
     overflow:hidden;
@@ -126,7 +128,7 @@
 
     background:rgba(0,0,0,.45);
 
-    color:#fff;
+    color: var(--gray-light);
 
     cursor:pointer;
 
@@ -152,9 +154,9 @@
 
 .banner-btn:hover{
 
-    background:var(--black-light);
+    background: var(--black-light);
 
-    color:var(--gray-light);
+    color:var(--color-secondary);
 
     transform:translateY(-50%) scale(1.08);
 
@@ -199,9 +201,6 @@
 ====================================*/
 
 .main-content h2{
-
-    font-family:var(--font-primary);
-
     font-size:3rem;
 
     line-height:1.2;
@@ -214,7 +213,7 @@
 
 .main-content h2 span{
 
-    color:var(--gold);
+    color:var(--color-secondary);
 
 }
 
@@ -228,9 +227,9 @@
 
     max-width:390px;
 
-    color:var(--white);
+    color:var(--gray-light);
 
-    font-family:var(--font-secund);
+    font-family:var(--font-secundaria);
 
     font-size:1rem;
 
@@ -255,9 +254,9 @@
 
     border-radius:var(--radius-md);
 
-    background:var(--gold);
+    background:var(--color-secondary);
 
-    color:var(--black);
+    color:var(--invertido-texto-cor);
 
     font-family:var(--font-secund);
 
@@ -291,7 +290,7 @@
 
 .main-content button:hover{
 
-    background:var(--gold-hover);
+    background:var(--color-secondary-hover);
 
     box-shadow:0 12px 30px rgba(0,0,0,.35);
 

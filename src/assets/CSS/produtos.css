@@ -8,22 +8,19 @@
     display:flex;
     justify-content:center;
     align-items:center;
-    transform: translateY(-12vh);
     padding:0px 0px 20px;
-    background: var(--black);
+    margin-top: 2vh;
 
 }
 
 #destaques .container{
 
     width:100%;
-    max-width:1300px;
-
-    margin:auto;
+    margin:auto 3vh;
 
     padding:20px;
 
-    background:var(--black-soft);
+    background: var(--houver-bg);
 
     border-radius:var(--radius-md);
 
@@ -40,16 +37,16 @@
     justify-content:space-between;
 
     align-items:center;
-
-    margin-bottom:25px;
+ 
+    margin-bottom: 2vh;
 
 }
 
 .section-header h2{
 
-    color:var(--gray-light);
+    color:var(--principal-texto-cor);
 
-    font-family:var(--font-primary);
+    font-family:var(--font-secundaria);
 
     text-transform:uppercase;
 
@@ -57,7 +54,7 @@
 
 .section-header a{
 
-    color:var(--gold);
+    color:var(--color-secondary);
 
     text-decoration:none;
 
@@ -96,7 +93,7 @@
     width:230px;
     height: auto;
 
-    background:var(--white);
+    background:var(--invertido-bg);
 
     border-radius:8px;
 
@@ -111,7 +108,7 @@
 
     transition:.3s;
 
-    box-shadow:0 5px 18px rgba(0,0,0,.25);
+    box-shadow: var(--shadow-md);
 
 }
 
@@ -119,9 +116,9 @@
 
     transform:translateY(-1px);
 
-    border-color:var(--gold);
+    border-color:var(--invertido-texto-cor);
 
-    box-shadow:0 12px 25px rgba(0,0,0,.35);
+    box-shadow: var(--shadow-md);
 
 }
 
@@ -149,25 +146,27 @@
 
 .mais-vendido{
 
-    background:#ffc107;
+    background: var(--color-secondary);
 
-    color: var(--black);
+    color: var(--gray-light);
+
+    font-weight: 500;
 
 }
 
 .desconto{
 
-    background:#dc3545;
+    background: var(--erro);
 
-    color: var(--white);
+    color: var(--gray-light);
 
 }
 
 .lancamento{
 
-    background:#ffc107;
+    background: var(--aviso);
 
-    color: var(--black);
+    color: var(--gray-light);
 
 }
 
@@ -181,7 +180,7 @@
 
     height:150px;
 
-    background:var(--white);
+    background:var(--invertido-bg);
 
     display:flex;
 
@@ -210,6 +209,8 @@
 
     max-height: 250px;
 
+    border-top: 1px solid var(--invertido-texto-cor);
+
     flex:1;
 
     display:flex;
@@ -222,7 +223,7 @@
 
 .info-produto h3{
 
-    color: var(--black);
+    color: var(--invertido-texto-cor);
 
     font-size:.9rem;
 
@@ -240,7 +241,7 @@
 
 .avaliacao{
 
-    color:#f5b904;
+    color: var(--aviso);
 
     font-size:.8rem;
 
@@ -256,7 +257,7 @@
 
 .preco{
 
-    color: var(--black);
+    color: var(--invertido-texto-cor);
 
     font-size:1.8rem;
 
@@ -268,7 +269,7 @@
 
 .parcelas{
 
-    color: var(--black-soft);
+    color: var(--gray);
 
     font-size:.8rem;
 
@@ -278,7 +279,7 @@
 
 .pix{
 
-    color:#27d455;
+    color: var(--sucesso);
 
     font-size:.75rem;
 
@@ -304,13 +305,13 @@
 
     border-radius:6px;
 
-    background: #dda808;
+    background:  var(--color-secondary-hover);
 
-    color:#111;
+    color: #111;
 
     font-size:.9rem;
 
-    font-weight:700;
+    font-weight:600;
 
     text-transform:uppercase;
 
@@ -330,7 +331,7 @@
 
 .card-produto button:hover{
 
-    background: #e4ac06;
+    background: var(--color-secondary-light);
 
 }
 

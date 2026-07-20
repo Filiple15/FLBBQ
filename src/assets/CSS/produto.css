@@ -1,0 +1,317 @@
+main{
+    justify-content: left;
+    align-items: start;
+    display: flex;
+    flex-direction: column;
+}
+
+#categoria-produto{
+    padding-left: 4vh;
+
+
+}
+
+#categoria-produto p{
+
+    color: var(--gray-dark);
+    font-size:.7rem;
+
+}
+
+#produto{
+    padding: 0 4vh;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 2vh;
+}
+
+.produto-imgs{
+    
+    display:flex;
+    gap:10px;
+
+}
+
+.imgs{
+    height: 95%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+    gap:10px;
+
+}
+
+.imgs img{
+
+    width:90px;
+    height:90px;
+
+    object-fit:cover;
+
+    border-radius: var(--radius-lg);
+
+    cursor:pointer;
+
+    border:2px solid transparent;
+
+    transition:.5s;
+
+}
+
+.imgs img:hover{
+
+    border-color: var(--gold-hover);
+
+}
+
+.img-mostrando{
+    width: 75vh;
+    padding:30px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.img-mostrando img{
+
+    width:100%;
+    max-width:650px;
+    border-radius: var(--radius-lg);
+
+    transition:.5s;
+
+}
+
+.img-mostrando img:hover{
+
+    transform:scale(1.01);
+
+}
+
+.vantagens{
+    width: 100%;
+    height: auto;
+    transform: translateY(-15px);
+    display:flex;
+    padding-right: 35px;
+    justify-content: right;
+    flex-direction: row;
+    gap: 20px;
+
+}
+
+.vantagens span{
+
+    color: var(--gray-dark);
+
+    display:flex;
+    align-items: center;
+
+    gap:8px;
+
+    font-size:.85rem;
+
+}
+
+.vantagens i{
+
+    color: var(--gray-light);
+
+}
+
+.produto-info{
+
+    margin-top: 4.5vh;
+    display:flex;
+    height: auto;
+
+    flex-direction:column;
+
+    gap:8px;
+
+}
+
+.tag{
+
+    width:max-content;
+
+    padding:5px 10px;
+
+    border-radius: var(--radius-sm);
+
+    background: var(--gold-hover);
+
+    color: var(--black);
+
+    font-weight:700;
+
+    text-transform:uppercase;
+
+    font-size:.7rem;
+
+}
+
+.sobre{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.produto-info h1{
+
+    font-size:2rem;
+
+    line-height:1.4;
+
+}
+
+.produto-info h2{
+
+    color: var(--gold-hover);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size:1.5rem;
+
+    font-weight:500;
+
+}
+
+.produto-info h2 i{
+    font-size: .75rem;
+    color: var(--gray-dark);
+}
+
+.marca{
+    font-size: small;
+    color: var(--gray-dark);
+}
+
+.produto-info h3{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+    color: var(--gold);
+
+    gap: 3px;
+
+    font-family: Sora;
+
+    font-size:2.5rem;
+
+    font-weight:700;
+
+}
+
+.pix{
+
+    color: var(--sucesso);
+
+    font-size:.8rem;
+
+    font-weight:600;
+
+}
+
+.produto-info button{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 10px;
+
+    padding:12px;
+
+    font-size:.9rem;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.5s;
+
+    border:none;
+
+    border-radius: var(--radius-lg);
+
+}
+
+.btnCompra{
+    background: var(--gold);
+
+    color: var(--black);
+
+    margin-top:10px;
+
+    background-color: var(--gold);
+}
+
+.btnCompra:hover{
+
+    background: var(--gold-hover);
+
+    transform:translateY(-2px);
+
+    box-shadow:0 12px 25px rgba(160, 121, 13, 0.041);
+
+}
+
+.btnCarrinho{
+    margin: 1vh 0;
+    color: var(--white);
+    background-color: rgba(68, 67, 65, 0.258);
+}
+
+.btnCarrinho:hover{
+    color: var(--gray-light);
+    background-color: rgba(154, 153, 151, 0.179);
+}
+
+.frete{
+    background-color: var(--black-soft);
+    font-size: .8rem;
+    display: flex;
+    flex-direction: column;
+    padding: 15px 18px;
+    gap: 12px;
+    height: auto;
+    width: 100%;
+    border-radius: var(--radius-lg);
+}
+
+@media(max-width:1000px){
+
+#produto{
+
+    grid-template-columns:1fr;
+
+}
+
+.produto-imgs{
+
+    flex-direction:column;
+
+}
+
+.imgs{
+
+    flex-direction:row;
+
+    justify-content:center;
+
+}
+
+.vantagens{
+
+    flex-direction:column;
+
+    gap:10px;
+
+}
+
+}

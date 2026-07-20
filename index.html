@@ -4,125 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- FAVICON SITE -->
-     <link rel="shortcut icon" href="./src/favicon/favicon.ico" type="image/x-icon">
+     <link rel="shortcut icon" href="./src/favicon/FL.svg" type="image/x-icon">
     <!-- IMPORT DOS ICONES -->
      <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <!-- LINK dos CSS -->
      <link rel="stylesheet" href="./src/style/global.css">
-     <link rel="stylesheet" href="./src/style/header.css">
-     <link rel="stylesheet" href="./src/style/banner.css">
-     <link rel="stylesheet" href="./src/style/categorias.css">
-     <link rel="stylesheet" href="./src/style/produtos.css">
-     <link rel="stylesheet" href="./src/style/marcas.css">
-     <link rel="stylesheet" href="./src/style/contato.css">
-     <link rel="stylesheet" href="./src/style/footer.css">
     <title>FLBBQ</title>
 </head>
 <body>
-    <header class="header">
-
-        <!-- TOPO -->
-        <div class="header-top">
-            <div class="container">
-
-                <div class="header-contact">
-                    <a href="#">
-                        <i class="fa-regular fa-comment"></i>
-                        Fale Conosco
-                    </a>
-
-                    <a href="tel:+5518996168067">
-                        <i class="fa-solid fa-phone"></i>
-                        (18) 99616-8067
-                    </a>
-
-                    <a href="#">
-                        <i class="fa-brands fa-whatsapp"></i>
-                        (18) 99616-8067
-                    </a>
-                </div>
-
-                <div class="header-user-links">
-                    <a href="#">
-                        <i class="fa-regular fa-file-lines"></i>
-                        Meus Pedidos
-                    </a>
-
-                    <a href="#">
-                        <i class="fa-regular fa-user"></i>
-                        Minha Conta
-                    </a>
-                </div>
-
-            </div>
-        </div>
-
-        <!-- PRINCIPAL -->
-        <div class="header-main">
-            <div class="container">
-
-                <div class="logo">
-                    <a href="./index.html"><img src="./src/assets/imgs/logo.png" alt="FLBBQ"></a>
-                </div>
-
-                <form class="search-box">
-                    <input type="text" placeholder="Digite o que você procura">
-                    <button onclick="procurar()">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </button>
-                </form>
-
-                <div class="header-actions">
-
-                    <a href="#" class="account">
-                        <i class="fa-regular fa-user"></i>
-
-                        <div>
-                            <span>Entrar</span>
-                            <small>ou cadastre-se</small>
-                        </div>
-                    </a>
-
-                    <a href="#" class="cart">
-                        <i class="fa-solid fa-cart-shopping"></i>
-
-                        <div>
-                            <span>Carrinho</span>
-                            <small>R$ 0,00</small>
-                        </div>
-
-                        <span class="cart-badge">0</span>
-                    </a>
-
-                </div>
-
-            </div>
-        </div>
-        <hr>
-
-        <!-- MENU -->
-        <nav class="navbar">
-            <div class="container">
-
-                <ul>
-                    <li><a href="#">Bonés Importados</a></li>
-                    <li><a href="#">Vestuário</a></li>
-                    <li><a href="#">Térmicos</a></li>
-                    <li><a href="#">Cerveja</a></li>
-                    <li><a href="#">Abridores de Garrafa</a></li>
-                    <li><a href="#">Bolsas e Mochilas</a></li>
-                    <li><a href="#">Cadeiras e Decoração</a></li>
-                    <li><a href="#">+ Categorias</a></li>
-                </ul>
-
-            </div>
-        </nav> 
-
-    </header>
-
-    <a href="https://api.whatsapp.com/send/?phone=5518996168067&text=Seja+bem+bem+vindo+ao+FLBBQ%2C+em+que+posso+te+ajudar+hoje" class="btn-contato" target="_blank">
-        <img src="./src/assets/imgs/ico/whatsapp.png" alt="Contato">
-    </a>
+    
+    <header id="header"></header>
 
     <main>
 
@@ -166,7 +57,7 @@
                     Equipamentos e acessórios das melhores marcas para sua aventura.
                 </p>
 
-                <button>
+                <button href="#destaques">
 
                     <a href="#destaques">VER PRODUTOS</a>
 
@@ -337,58 +228,51 @@
 
                 <!-- Produto -->
 
-                <article class="card-produto">
+                <a href="produto.html?id=1" class="link-produto">
 
-                    <span class="status mais-vendido">Mais Vendido</span>
+                    <article class="card-produto">
 
-                    <div class="image-produto" id="produto">
+                        <span class="status mais-vendido">Mais Vendido</span>
 
-                        <img src="./src/assets/imgs/produtos/Bone-Columbia-PFG.png" alt="Image Produto">
+                        <div class="image-produto">
 
-                    </div>
-
-                    <div class="info-produto">
-
-                        <h3>
-                            Boné Columbia importado PFG
-                        </h3>
-
-                        <div class="avaliacao">
-
-                            ★★★★★
-                            <span>(498)</span>
+                            <img src="./src/assets/imgs/produtos/Bone-Columbia-PFG.png" alt="Boné Columbia PFG">
 
                         </div>
 
-                        <div class="preco">
+                        <div class="info-produto">
 
-                            R$ 259,90
+                            <h3>
+                                Boné Columbia Importado PFG
+                            </h3>
+
+                            <div class="avaliacao">
+                                ★★★★★
+                                <span>(498)</span>
+                            </div>
+
+                            <div class="preco">
+                                R$ 259,90
+                            </div>
+
+                            <div class="parcelas">
+                                ou 12x de R$ 21,66
+                            </div>
+
+                            <div class="pix">
+                                5% OFF no PIX
+                            </div>
+
+                            <button>
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                Comprar
+                            </button>
 
                         </div>
 
-                        <div class="parcelas">
+                    </article>
 
-                            ou 12x de R$ 12,48
-
-                        </div>
-
-                        <div class="pix">
-
-                            5% OFF no PIX
-
-                        </div>
-
-                        <button>
-
-                            <i class="fa-solid fa-cart-shopping"></i>
-
-                            Comprar
-
-                        </button>
-
-                    </div>
-
-                </article>
+                </a>
 
                 <!-- Repita os outros produtos -->
 
@@ -412,8 +296,7 @@
 
                 <div class="marcas-track">
 
-                    <!-- PRIMEIRA LISTA -->
-
+                    
                     <a href="https://www.basspro.com/home" class="marca" target="_blank">
                         <img src="./src/assets/imgs/marcas/bassproshops.png" alt="Bass Pro Shops">
                     </a>
@@ -438,36 +321,35 @@
                         <img src="./src/assets/imgs/marcas/budlight.png" alt="Bud Light">
                     </a>
 
-                    <a href="#" class="marca">
+                    <a href="https://www.browning.com/" class="marca">
                         <img src="./src/assets/imgs/marcas/bronwning.png" alt="Browning">
                     </a>
 
-                    <a href="#" class="marca">
+                    <a href="https://www.cabelas.com/" class="marca">
                         <img src="./src/assets/imgs/marcas/cabelas.png" alt="Cabelas">
                     </a>
 
-                    <a href="#" class="marca">
+                    <a href="https://www.coleman.com/" class="marca">
                         <img src="./src/assets/imgs/marcas/coleman.png" alt="Coleman">
                     </a>
 
-                    <a href="#" class="marca">
+                    <a href="https://www.coors.com/" class="marca">
                         <img src="./src/assets/imgs/marcas/coors.png" alt="Coors">
                     </a>
 
-                    <a href="#" class="marca">
+                    <a href="https://kershaw.kaiusa.com/" class="marca">
                         <img src="./src/assets/imgs/marcas/kershaw.png" alt="Kershaw">
                     </a>
 
-                    <a href="#" class="marca">
+                    <a href="https://www.millerhighlife.com/" class="marca">
                         <img src="./src/assets/imgs/marcas/miller.png" alt="Miller">
                     </a>
 
-                    <a href="#" class="marca">
+                    <a href="https://www.modelousa.com/" class="marca">
                         <img src="./src/assets/imgs/marcas/modelo.png" alt="Modelo">
                     </a>
 
-                    <!-- SEGUNDA LISTA (DUPLICADA) -->
-
+                    
                     <a href="https://www.basspro.com/home" class="marca" target="_blank">
                         <img src="./src/assets/imgs/marcas/bassproshops.png" alt="Bass Pro Shops">
                     </a>
@@ -492,31 +374,31 @@
                         <img src="./src/assets/imgs/marcas/budlight.png" alt="Bud Light">
                     </a>
 
-                    <a href="#" class="marca">
+                    <a href="https://www.browning.com/" class="marca">
                         <img src="./src/assets/imgs/marcas/bronwning.png" alt="Browning">
                     </a>
 
-                    <a href="#" class="marca">
+                    <a href="https://www.cabelas.com/" class="marca">
                         <img src="./src/assets/imgs/marcas/cabelas.png" alt="Cabelas">
                     </a>
 
-                    <a href="#" class="marca">
+                    <a href="https://www.coleman.com/" class="marca">
                         <img src="./src/assets/imgs/marcas/coleman.png" alt="Coleman">
                     </a>
 
-                    <a href="#" class="marca">
+                    <a href="https://www.coors.com/" class="marca">
                         <img src="./src/assets/imgs/marcas/coors.png" alt="Coors">
                     </a>
 
-                    <a href="#" class="marca">
+                    <a href="https://kershaw.kaiusa.com/" class="marca">
                         <img src="./src/assets/imgs/marcas/kershaw.png" alt="Kershaw">
                     </a>
 
-                    <a href="#" class="marca">
+                    <a href="https://www.millerhighlife.com/" class="marca">
                         <img src="./src/assets/imgs/marcas/miller.png" alt="Miller">
                     </a>
 
-                    <a href="#" class="marca">
+                    <a href="https://www.modelousa.com/" class="marca">
                         <img src="./src/assets/imgs/marcas/modelo.png" alt="Modelo">
                     </a>
 
@@ -527,152 +409,9 @@
         </div>
 
     </section>
-
-    <footer>
-
-        <div class="container footer-container">
-
-            <!-- Logo -->
-
-            <div class="footer-logo">
-
-                <img src="./src/assets/imgs/logo.png" alt="FLBBQ">
-
-                <p>
-                    Os melhores produtos para quem vive o verdadeiro
-                    outdoor.
-                </p>
-
-                <div class="footer-social">
-
-                    <!-- Instagram -->
-                    <a href="https://instagram.com/flbbq" target="_blank" aria-label="Instagram">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-
-                    <!-- WhatsApp -->
-                    <a href="https://api.whatsapp.com/send/?phone=5518996168067&text=Seja+bem+bem+vindo+ao+FLBBQ%2C+em+que+posso+te+ajudar+hoje" target="_blank" aria-label="WhatsApp">
-                        <i class="fa-brands fa-whatsapp"></i>
-                    </a>
-
-                    <!-- E-mail -->
-                    <a href="mailto:contato@flbbq.com.br" aria-label="E-mail">
-                        <i class="fa-regular fa-envelope"></i>
-                    </a>
-
-                    <a href="https://www.google.com/maps/search/?api=1&query=Av.+Cel.+José+Soares+Marcondes,+3364+-+Jardim+Bongiovani,+Presidente+Prudente+-+SP,+19050-230" target="_blank" aria-label="Nossa localização">
-                        <i class="fa-solid fa-map-location-dot"></i>
-                    </a>
-
-                </div>
-
-            </div>
-
-            <!-- Newsletter -->
-
-            <div class="footer-news">
-
-                <h3>Receba nossas ofertas</h3>
-
-                <p>
-                    Cadastre-se e receba ofertas exclusivas.
-                </p>
-
-                <form>
-
-                    <input
-                        type="email"
-                        placeholder="Seu melhor e-mail"
-                    >
-
-                    <button>
-
-                        <i class="fa-solid fa-paper-plane"></i>
-
-                    </button>
-
-                </form>
-
-            </div>
-
-            <!-- Institucional -->
-
-            <div class="footer-links">
-
-                <h3>Institucional</h3>
-
-                <ul>
-
-                    <li><a href="#">Quem Somos</a></li>
-
-                    <li><a href="#">Política de Privacidade</a></li>
-
-                    <li><a href="#">Trocas e Devoluções</a></li>
-
-                    <li><a href="#">Formas de Pagamento</a></li>
-
-                    <li><a href="#">Contato</a></li>
-
-                </ul>
-
-            </div>
-
-            <!-- Atendimento -->
-
-            <div class="footer-contact">
-
-                <h3>Atendimento</h3>
-
-                <ul>
-
-                    <li>
-
-                        <i class="fa-brands fa-whatsapp"></i>
-
-                        (18) 99999-9999
-
-                    </li>
-
-                    <li>
-
-                        <i class="fa-solid fa-phone"></i>
-
-                        18 996168067
-
-                    </li>
-
-                    <li>
-
-                        <i class="fa-regular fa-envelope"></i>
-
-                        flbbq@hotmail.com
-
-                    </li>
-
-                </ul>
-
-            </div>
-
-        </div>
-
-        <div class="footer-bottom">
-
-            <div class="container">
-
-                <p>
-
-                    © 2026 FLBBQ - Todos os direitos reservados.
-
-                </p>
-
-            </div>
-
-        </div>
-
-    </footer>
-
-    <script src="./src/assets/JS/main.js"></script>
-    <script src="./src/assets/JS/banner/script.js"></script>
+    
+    <footer id="footer"></footer>
+    <script type="module" src="./src/assets/JS/main.js"></script>
     <script src="./src/assets/JS/categorias/script.js"></script>
 </body>
 </html>

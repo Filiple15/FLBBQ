@@ -5,25 +5,17 @@
 #marcas{
 
     width:100%;
-
-    transform: translateY(-10vh);
-
     display:flex;
     justify-content:center;
-
     padding:0 20px 20px;
-
-    background: var(--black);
 
 }
 
 #marcas .container{
 
     width:100%;
-    max-width:1300px;
-
-    background:var(--black-light);
-
+    background:var(--houver-bg);
+    margin: auto 3vh;
     padding:0 20px 25px;
 
     border-radius:var(--radius-md);
@@ -48,25 +40,23 @@
 
 #marcas .section-header h2{
 
-    font-family:var(--font-secund);
+    font-family:var(--font-secundaria);
 
-    color:var(--white);
+    color:var(--principal-texto-cor);
 
-    font-size:1.7rem;
+    font-size:1.3rem;
 
 }
 
 #marcas .section-header a{
 
-    color:var(--gold);
+    color: #000;
 
     text-decoration:none;
 
-    font-family:var(--font-primary);
+    font-size:.7rem;
 
-    font-size:.95rem;
-
-    transition:var(--transition-normal);
+    transition:var(--transicao-md);
 
 }
 
@@ -113,7 +103,7 @@
 
     background:linear-gradient(
         to right,
-        var(--black-light),
+        var(--houver-bg),
         transparent
     );
 
@@ -125,7 +115,7 @@
 
     background:linear-gradient(
         to left,
-        var(--black-light),
+        var(--houver-bg),
         transparent
     );
 
@@ -169,7 +159,7 @@
 
     height:85px;
 
-    background:var(--white);
+    background: #fff;
 
     border-radius:var(--radius-md);
 
@@ -200,7 +190,7 @@
 
     border-color:var(--gold);
 
-    box-shadow:0 15px 30px rgba(0,0,0,.25);
+    box-shadow: var(--shadow-lg);
 
 }
 

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FAVICON SITE -->
+     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <!-- IMPORT DOS ICONES -->
+     <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- LINK CSS -->
+     <link rel="stylesheet" href="./src/style/global.css">
+     <link rel="stylesheet" href="./src/assets/CSS/produto.css">
+    <title></title>
+</head>
+<body>
+    <header id="header"></header>
+
+   <main>
+
+        <div id="categoria-produto">
+            <p>Home <span>></span> Categoria <span>></span> Produto</p>
+        </div>
+
+        <section id="produto">
+
+            <div class="produto-imgs">
+
+                <div class="imgs">
+
+                    <img src="./src/assets/imgs/produtoTeste.png">
+                    <img src="./src/assets/imgs/produtoTeste.png">
+                    <img src="./src/assets/imgs/produtoTeste.png">
+                    <img src="./src/assets/imgs/produtoTeste.png">
+
+                </div>
+
+                <div class="img-principal">
+
+                    <div class="img-mostrando">
+
+                        <img src="./src/assets/imgs/produtoTeste.png">
+
+                    </div>
+
+                    <div class="vantagens">
+
+                        <span><i class="fa-solid fa-camera"></i> Fotos reais</span>
+
+                        <span><i class="fa-solid fa-truck-fast"></i> Envio para todo Brasil</span>
+
+                        <span><i class="fa-solid fa-shield-halved"></i> Compra segura</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="produto-info">
+
+                <span class="tag">Mais Vendido</span>
+
+                <h1>Boné Columbia importado PFG</h1>
+
+                <div class="sobre">
+                    <h2>★★★★★ <i class="avaliaçoes">(498 avaliações)</i></h2>
+                    <p class="marca">Marca: <i>Columbia</i></p>
+                </div>
+
+                <h3>R$<i>329,90</i></h3>
+
+                <p class="pix">5% OFF no PIX</p>
+
+                <button onclick="cliquei('COMPRA')" class="btnCompra">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    COMPRAR
+                </button>
+
+                <button onclick="cliquei('CARRINHO')" class="btnCarrinho">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    CARRINHO
+                </button>
+
+                <div class="frete">
+                    <div class=frete-icone">
+                        <i></i>
+                        <p>Calcule o frete e o prazo de entrega</p>
+                    </div>
+                    <div class="frete-calculo">
+                        <input type="number" name="cep" id="freteCEP">
+                        <input type="button" value="calcular">
+                    </div>
+                    <a href="#">Não sei meu CEP</a>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+    <footer id="footer"></footer>
+    <script src="./src/assets/JS/main.js"></script>
+    <script src="./src/assets/JS/produto/script.js"></script>
+</body>
+</html>
