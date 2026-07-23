@@ -1,0 +1,544 @@
+@import url("../CSS/variaveis.css");
+
+/*====================================
+            RESET
+====================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+html,
+body{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+}
+
+body{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding: 5vh;
+
+    font-family:var(--font-principal);
+
+    color:var(--gray-light);
+
+    background: url("../imgs/backgrand/entrar.png");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+}
+
+/*====================================
+        ELEMENTOS GLOBAIS
+====================================*/
+
+img{
+    display:block;
+    max-width:100%;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+button,
+input{
+    font-family:inherit;
+}
+
+button{
+    cursor:pointer;
+    border:none;
+}
+
+/*====================================
+            LAYOUT
+====================================*/
+.btn-home{
+
+    position: fixed;
+
+    top:3vh;
+
+    left: 15px;
+
+    z-index: 999;
+
+}
+
+.btn-home a{
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 8px 12px;
+
+    background: var(--gray-dark);
+
+    border: 1px solid var(--gray);
+
+    border-radius: 14px;
+
+    backdrop-filter: blur(18px);
+
+    color: var(--gray-light);
+
+    text-decoration: none;
+
+    transition: var(--transicao-md);
+
+    box-shadow: var(--shadow-lg);
+
+}
+
+.btn-home a:hover{
+
+    background: var(--color-secondary-dark);
+
+    color: var(----principal-texto-cor);
+
+    transform: translateY(-2px);
+
+    box-shadow: var(--shadow-lg);
+
+}
+
+.btn-home i{
+
+    font-size: .78rem;
+
+}
+
+.btn-home span{
+
+    font-size: .85rem;
+
+    font-weight: 500;
+
+}
+
+main{
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    overflow:hidden;
+
+    border-radius: var(--radius-md);
+
+    background:
+    linear-gradient(
+        180deg,
+        rgba(255,255,255,.03),
+        rgba(0,0,0,.18)
+    );
+
+    border:1px solid var(--gray-light);
+
+    backdrop-filter:blur(15px);
+
+    box-shadow: var(--shadow-lg);
+
+    
+
+}
+
+/*====================================
+        LADO ESQUERDO
+====================================*/
+
+.leftItens{
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    margin-left: 5%;
+
+}
+
+.textsLeft{
+
+    display:flex;
+    flex-direction:column;
+
+    width:max(500px);
+
+}
+
+.LogoImcor{
+
+    width:40%;
+
+
+}
+
+.textsLeft h1{
+
+    font-size:3.5rem;
+
+    line-height:1.1;
+
+    font-family:var(--font-secundaria);
+
+    margin-bottom:20px;
+
+}
+
+.textsLeft p{
+
+    font-size:1rem;
+
+    line-height:1.9;
+
+    color: var(--gray-light);
+
+}
+
+/*====================================
+        CARD DE SEGURANÇA
+====================================*/
+
+.infoLeft{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:20px;
+
+    margin-top: 4vh;
+
+    padding:15px;
+
+    border-radius: var(--radius-md);
+
+    background:var(--gray-dark);
+
+    border:1px solid var(--gray);
+
+    backdrop-filter:blur(10px);
+
+}
+
+.infoLeft i{
+
+    font-size:1.8rem;
+
+    color:var(--color-secondary);
+
+}
+
+.infoSeguLeft{
+
+    display:flex;
+    flex-direction:column;
+
+    gap:8px;
+
+}
+
+.infoSeguLeft h3{
+
+    font-size:1rem;
+
+    color:var(--gray-light);
+
+    font-weight: 600;
+
+}
+
+.infoSeguLeft p{
+
+    color: var(--gray-light);
+
+    line-height:1.6;
+
+    font-size:.9rem;
+
+}
+
+/*====================================
+        FORMULÁRIO
+====================================*/
+
+.form-container{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    padding:4vh 60px 60px;
+
+    background:
+    linear-gradient(
+        180deg,
+        rgba(18,18,18,.55),
+        rgba(12,12,12,.75)
+    );
+
+    animation:fadeRight .7s ease;
+
+}
+
+/*====================================
+        CABEÇALHO
+====================================*/
+
+.logoFrase{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    text-align:center;
+
+}
+
+.logoFrase img{
+
+    width:110px;
+
+}
+
+.frase{
+
+    display:flex;
+    flex-direction:column;
+
+    gap:15px;
+    margin-bottom: 2vh;
+
+}
+
+.boasVindas{
+
+    font-size:2rem;
+
+
+}
+
+.frase p{
+
+    color: var(----principal-texto-cor);
+
+    line-height:1.8;
+
+    max-width:420px;
+
+    font-family:var(--font-secundaria);
+
+}
+
+/*====================================
+            INPUTS
+====================================*/
+
+.inputs{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+.input-box input{
+
+    width:100%;
+
+    height: 7vh;
+
+    padding:0 50px 0 18px;
+
+    border:none;
+
+    border-radius:16px;
+
+    background:rgba(255,255,255,.06);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    color:var(--gray-light);
+
+    font-size:.95rem;
+
+    transition: var(--transicao-md);
+
+}
+
+.input-box input::placeholder{
+
+    color: var(--gray);
+
+}
+
+.input-box input:focus{
+
+    outline:none;
+
+    border-color:var(--color-secondary);
+
+    box-shadow: var(--shadow-lg);
+
+}
+
+.input-box i{
+
+    position:absolute;
+
+    right:18px;
+
+    top:42px;
+
+    color: var(--gray-light);
+
+    font-size:1rem;
+
+}
+
+/*====================================
+        ESQUECI SENHA
+====================================*/
+
+.remember-forgot{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+}
+
+.EsqueceuSenha{
+
+    color:var(--color-secondary);
+
+    margin-top: 5px;
+
+    font-size:.75rem;
+
+    transition: var(--transicao-sm);
+
+}
+
+.EsqueceuSenha:hover{
+
+    text-decoration:underline;
+
+}
+
+/*====================================
+            BOTÃO LOGIN
+====================================*/
+
+.login{
+
+    width:100%;
+
+    height: 7vh;
+
+    margin-top:18px;
+
+    border-radius: var(--radius-md);
+
+    font-size:.9rem;
+
+    font-weight:600;
+
+    color: var(--gray-light);
+
+    background:
+    linear-gradient(
+        180deg,
+        var(--color-secondary),
+        var(--color-secondary-hover)
+    );
+
+    transition: var(--transicao-sm);
+
+}
+
+.login:hover{
+
+    transform:translateY(-2px);
+
+    filter:brightness(1.05);
+
+}
+
+/*====================================
+        CRIAR CONTA
+====================================*/
+
+.cadastrar{
+    margin-top: 3vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: .85rem;
+}
+
+.criarConta{
+
+    text-align:center;
+
+    color: var(----principal-texto-cor);
+
+    transition: var(--transicao-sm);
+
+}
+
+.criarConta:hover{
+
+    color:var(--color-secondary-hover);
+    transform: translateY(-2px);
+
+}
+
+/*====================================
+            ANIMAÇÕES
+====================================*/
+
+@keyframes fadeRight{
+
+    from{
+
+        opacity:0;
+        transform:translateX(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateX(0);
+
+    }
+
+}

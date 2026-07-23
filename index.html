@@ -11,7 +11,7 @@
      <link rel="stylesheet" href="./src/style/global.css">
     <title>FLBBQ</title>
 </head>
-<body>
+<body id="home">
     
     <header id="header"></header>
 
@@ -43,6 +43,16 @@
             <button class="banner-btn next">
                 <i class="fa-solid fa-chevron-right"></i>
             </button>
+
+            <!-- Indicadores -->
+            <div class="banner-indicators">
+
+                <span class="indicator active"></span>
+                <span class="indicator"></span>
+                <span class="indicator"></span>
+                <span class="indicator"></span>
+
+            </div>
 
             <!-- Conteúdo -->
 
@@ -219,6 +229,24 @@
             <div class="section-header">
 
                 <h2>Destaques</h2>
+
+                <div class="section-filtros">
+
+                    <select name="categoria" id="categoria">
+
+                        <option value="todos">Todas as categorias</option>
+                        <option value="bones">Bonés Importados</option>
+                        <option value="vestuario">Vestuário</option>
+                        <option value="termicos">Térmicos</option>
+                        <option value="cerveja">Cerveja</option>
+                        <option value="abridores">Abridores</option>
+                        <option value="bolsas">Bolsas e Mochilas</option>
+                        <option value="cadeiras">Cadeiras e Decoração</option>
+                        <option value="terere">Ervas para Tereré</option>
+
+                    </select>
+
+                </div>
 
                 <a href="#">Ver todos</a>
 

@@ -32,42 +32,151 @@
 
 .section-header{
 
-    display:flex;
+    display: flex;
 
-    justify-content:space-between;
+    align-items: center;
 
-    align-items:center;
- 
-    margin-bottom: 2vh;
+    justify-content: space-between;
+
+    gap: 24px;
+
+    margin-bottom: 28px;
+
+    padding-bottom: 16px;
+
+    border-bottom: 1px solid var(--rgba-md);
 
 }
 
 .section-header h2{
 
-    color:var(--principal-texto-cor);
+    display: flex;
 
-    font-family:var(--font-secundaria);
+    align-items: center;
 
-    text-transform:uppercase;
+    gap: 12px;
+
+    margin: 0;
+
+    font-family: var(--font-secundaria);
+
+    font-size: 1.9rem;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    color: var(--principal-texto-cor);
+
+    letter-spacing: .8px;
+
+}
+
+.section-header h2::before{
+
+    content: "";
+
+    width: 6px;
+
+    height: 34px;
+
+    border-radius: 50px;
+
+    background: var(--color-secondary);
+
+}
+
+.section-header .section-filtros{
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    margin-left: auto;
+
+}
+
+.section-header select{
+
+    min-width: 220px;
+
+    height: 46px;
+
+    padding: 0 16px;
+
+    border: 1px solid var(--rgba-md);
+
+    border-radius: var(--radius-lg);
+
+    background: var(--houver-bg);
+
+    color: var(--principal-texto-cor);
+
+    font-size: .92rem;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+.section-header select:hover{
+
+    border-color: var(--color-secondary);
+
+}
+
+.section-header select:focus{
+
+    outline: none;
+
+    border-color: var(--color-secondary);
+
+    box-shadow: 0 0 0 3px rgba(201,162,39,.18);
 
 }
 
 .section-header a{
 
-    color:var(--color-secondary);
+    display: flex;
 
-    text-decoration:none;
+    align-items: center;
 
-    font-weight:600;
+    gap: 8px;
+
+    color: var(--color-secondary);
+
+    text-decoration: none;
+
+    font-size: .95rem;
+
+    font-weight: 600;
+
+    transition: .3s;
+
+}
+
+.section-header a::after{
+
+    content: "→";
+
+    transition: .3s;
 
 }
 
 .section-header a:hover{
 
-    text-decoration:underline;
+    color: var(--color-secondary-hover);
 
 }
 
+.section-header a:hover::after{
+
+    transform: translateX(5px);
+
+}
 /*====================================
             GRID
 ====================================*/
@@ -93,7 +202,7 @@
     width:230px;
     height: auto;
 
-    background:var(--invertido-bg);
+    background:var(--gray-light);
 
     border-radius:8px;
 
@@ -104,7 +213,7 @@
     display:flex;
     flex-direction:column;
 
-    border:1px solid rgba(255,255,255,.08);
+    border:1px solid var(--shadow-md);
 
     transition:.3s;
 
@@ -116,7 +225,7 @@
 
     transform:translateY(-1px);
 
-    border-color:var(--invertido-texto-cor);
+    border-color: 2px solid var(--gray-dark);
 
     box-shadow: var(--shadow-md);
 
@@ -180,7 +289,7 @@
 
     height:150px;
 
-    background:var(--invertido-bg);
+    background:var(--gray-light);
 
     display:flex;
 
@@ -209,7 +318,7 @@
 
     max-height: 250px;
 
-    border-top: 1px solid var(--invertido-texto-cor);
+    border-top: 1px solid var(--gray-dark);
 
     flex:1;
 
@@ -223,7 +332,7 @@
 
 .info-produto h3{
 
-    color: var(--invertido-texto-cor);
+    color: var(--gray-dark);
 
     font-size:.9rem;
 
@@ -257,7 +366,7 @@
 
 .preco{
 
-    color: var(--invertido-texto-cor);
+    color: var(--gray-dark);
 
     font-size:1.8rem;
 
@@ -269,7 +378,7 @@
 
 .parcelas{
 
-    color: var(--gray);
+    color: var(--gray-dark);
 
     font-size:.8rem;
 
@@ -307,7 +416,7 @@
 
     background:  var(--color-secondary-hover);
 
-    color: #111;
+    color: var(--gray-dark);
 
     font-size:.9rem;
 

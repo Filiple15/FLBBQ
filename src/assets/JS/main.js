@@ -40,3 +40,13 @@ async function iniciarSite(){
 
 iniciarSite();
 iniciarBanner();
+
+import {buscarCategoria} from '../JS/services/categoria.service.js'
+
+async function iniciarCategorias(){
+    let id = window.prompt(`Escolha uma categoria de 1 a 6: `)
+    const res = await buscarCategoria(id)
+    console.log(res)
+}
+
+// iniciarCategorias()
