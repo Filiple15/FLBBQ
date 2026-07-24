@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Entrar • FL Outdoors</title>
+
+    <link rel="icon" href="./src/favicon/favicon.ico">
+
+    <link rel="stylesheet" href="./src/assets/CSS/login.css">
+
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/78e81c1e30.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <div class="btn-home">
+        <a href="./" title="Voltar para a página inicial">
+            <i class="fa-solid fa-arrow-left"></i>
+            <span>Início</span>
+        </a>
+    </div>
+
+    <main>
+
+        <!-- ==========================
+                PAINEL ESQUERDO
+        =========================== -->
+
+        <aside class="leftItens">
+
+            <div class="leftContent">
+
+                <div class="textsLeft">
+                    <img
+                        class="LogoImcor"
+                        src="./src/assets/imgs/logos/logo-escuro.png"
+                        alt="Logo FL Outdoors">
+
+                    <p>
+
+                        Equipamentos, vestuário e acessórios das melhores
+                        marcas para quem vive aventuras de verdade.
+
+                    </p>
+                </div>
+
+                <section class="infoLeft">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                    <div class="infoSeguLeft">
+
+                        <h3>Ambiente Seguro</h3>
+
+                        <p>
+                            Seus dados são protegidos durante toda a navegação.
+                        </p>
+
+                        <p>
+                            Login criptografado e autenticação segura.
+                        </p>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </aside>
+
+        <!-- ==========================
+                PAINEL DIREITO
+        =========================== -->
+
+        <section class="rightItens">
+
+            <div class="formCard">
+
+                <form class="form-container">
+
+                    <!-- Cabeçalho -->
+
+                    <header class="logoFrase">
+
+                        <img
+                            src="./src/assets/imgs/logos/logo-escuro.png"
+                            alt="Logo FL Outdoors">
+
+                        <div class="frase">
+
+                            <h2 class="boasVindas">
+
+                                Bem-vindo novamente !
+
+                            </h2>
+
+                            <p>
+
+                                Faça login para acessar sua conta,
+                                acompanhar seus pedidos e continuar
+                                suas compras.
+
+                            </p>
+
+                        </div>
+
+                    </header>
+
+                    <!-- Campos -->
+
+                    <section class="inputs">
+
+                        <div class="input-box">
+
+                            <label for="root-email">
+
+                                E-mail
+
+                            </label>
+
+                            <div class="input">
+
+
+                                <input
+                                    id="root-email"
+                                    type="email"
+                                    placeholder="fl@email.com"
+                                    autocomplete="email">
+
+                            </div>
+
+                            <div id="requisitosEmail"></div>
+
+                        </div>
+
+                        <div class="input-box">
+
+                            <label for="root-senha">
+
+                                Senha
+
+                            </label>
+
+                            <div class="input">
+
+                                <input
+                                    id="root-senha"
+                                    type="password"
+                                    placeholder="••••••••"
+                                    autocomplete="current-password">
+
+                            </div>
+
+                            <div id="requisitosSenha"></div>
+
+                        </div>
+
+                    </section>
+
+                    <!-- Opções -->
+
+                    <section class="remember-forgot">
+
+                        <a href="#" class="EsqueceuSenha">
+
+                            Esqueceu sua senha?
+
+                        </a>
+
+                    </section>
+
+                    <!-- Botões -->
+
+                    <footer class="formFooter">
+
+                        <input type="button" class="login" value="Entrar" id="acessar">
+
+                        <div class="cadastrar">
+                            <p>
+
+                                Ainda não possui uma conta?
+
+                            </p>
+
+                            <a
+                                href="#"
+                                class="criarConta">
+
+                                Criar conta
+
+                            </a>
+                        </div>
+
+                    </footer>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+    <script type="module" src="./src/assets/JS/acessar/script.js"></script>
+
+</body>
+
+</html>

@@ -12,17 +12,13 @@ export function iniciarBanner(){
     const banner = document.querySelector(".main-conteiner");
     const nextBtn = document.querySelector(".next");
     const prevBtn = document.querySelector(".prev");
+    const indicators = document.querySelectorAll(".indicator");
 
     /*==============================
         VERIFICA SE EXISTE BANNER
     ==============================*/
 
-    if(
-        slides.length === 0 ||
-        !banner ||
-        !nextBtn ||
-        !prevBtn
-    ){
+    if( slides.length === 0 || indicators.length === 0 || !banner || !nextBtn || !prevBtn ){
         return;
     }
 
@@ -45,7 +41,15 @@ export function iniciarBanner(){
 
         });
 
+        indicators.forEach(indicator=>{
+
+            indicator.classList.remove("active");
+
+        });
+
         slides[index].classList.add("active");
+
+        indicators[index].classList.add("active");
 
     }
 
