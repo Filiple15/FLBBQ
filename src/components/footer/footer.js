@@ -46,3 +46,4 @@ function iniciarFooter(){
     console.log("Footer carregado com sucesso.");
 
 }
+

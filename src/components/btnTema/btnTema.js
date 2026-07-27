@@ -1,4 +1,4 @@
-export function iniciarTema() {
+export async function iniciarTema() {
 
     const toggleTema = document.getElementById("toggleTema");
 

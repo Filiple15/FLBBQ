@@ -136,7 +136,7 @@ footer h3{
 
     border-radius: var(--radius-md);
 
-    box-shadow: var(--shadow-md);
+    box-shadow: var(--shadow-lg);
 
 }
 
@@ -150,9 +150,9 @@ footer h3{
 
     padding: 16px;
 
-    color: var(--invertido-texto-cor);
+    color: var(--principal-texto-cor);
 
-    background: var(--invertido-bg);
+    background: var(--dark);
 
     font-size: .95rem;
 

@@ -7,15 +7,27 @@ import { iniciarTema } from "../../components/btnTema/btnTema.js";
 import { iniciarLogo } from "../../components/logo/logo.js";
 import { iniciarBanner } from "./banner/script.js";
 
+/* -------------------------
+    EXPORTADO OS SERVICES
+------------------------- */
 
-function carregarPagina(){
+import {listarCategorias} from "../JS/services/categoria.service.js"
+import { renderizarCategoria } from "./categorias/script.js";
+import {renderizarFiltroCategorias} from "./categorias/script.js"
+import {iniciarProdutos} from "./produto/script.js"
 
-    const pagina = window.location.pathname;
+/* ------------------------
+    CONSTANTES DO SITE
+------------------------ */
 
-    console.log(pagina);
+        const categorias = await listarCategorias();
 
-}
+/* -------------------
+    EVENTS DA PAGINA
+------------------- */
 
+
+// INICIAR SITE
 async function iniciarSite(){
 
     try{
@@ -26,7 +38,14 @@ async function iniciarSite(){
 
         iniciarLogo();
 
+        iniciarBanner();
+
+        renderizarCategoria(categorias)
+        renderizarFiltroCategorias(categorias);
+
         console.log("Site iniciado com sucesso.");
+
+        iniciarProdutos()
 
     }
 
@@ -38,15 +57,14 @@ async function iniciarSite(){
 
 }
 
-iniciarSite();
-iniciarBanner();
+function carregarPagina(){
 
-import {buscarCategoria} from '../JS/services/categoria.service.js'
+    const pagina = window.location.pathname;
 
-async function iniciarCategorias(){
-    let id = window.prompt(`Escolha uma categoria de 1 a 6: `)
-    const res = await buscarCategoria(id)
-    console.log(res)
+    console.log(pagina);
+
 }
 
-// iniciarCategorias()
+/* ----------------- */
+    iniciarSite();   // INICIANDO SITE FL
+/* ----------------- */

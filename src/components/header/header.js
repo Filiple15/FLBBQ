@@ -2,6 +2,8 @@
             HEADER
 ====================================*/
 
+import {iniciarTema} from "../btnTema/btnTema.js"
+
 export async function carregarHeader(){
 
     try{
@@ -112,4 +114,8 @@ function iniciarMenu(){
 
     });
 
+}
+
+export async function carregarBtnTema(){
+    await iniciarTema();
 }

@@ -1,0 +1,249 @@
+@import url(../CSS/variaveis.css);
+
+/* ===================================
+                RESET
+=================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
+body{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+}
+
+body{
+
+    font-family:var(--font-principal);
+
+    background:var(--principal-bg);
+
+    color:var(--principal-texto-cor);
+
+}
+
+
+/*==========================
+        MAIN
+==========================*/
+
+.login{
+
+    display:flex;
+
+    width:100%;
+    height:100vh;
+
+}
+
+
+/*==========================
+        LADO ESQUERDO
+==========================*/
+
+.login-info{
+
+    width:35%;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+
+/*==========================
+        LOGO
+==========================*/
+
+.brand{
+
+    display:flex;
+
+}
+
+
+/*==========================
+    TEXTO PRINCIPAL
+==========================*/
+
+.info{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+
+/*==========================
+    BENEFÍCIOS
+==========================*/
+
+.beneficios{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.beneficios article{
+
+    display:flex;
+
+}
+
+
+/*==========================
+    SEGURANÇA
+==========================*/
+
+.seguranca{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+
+/*==========================
+        FORMULÁRIO
+==========================*/
+
+.login-formulario{
+
+    width:65%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+
+/*==========================
+            CARD
+==========================*/
+
+.card{
+
+    width:100%;
+
+    max-width:550px;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+
+/*==========================
+            TOPO
+==========================*/
+
+.topo{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+
+/*==========================
+            FORM
+==========================*/
+
+form{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+
+/*==========================
+            CAMPO
+==========================*/
+
+.campo{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+
+/*==========================
+            OPÇÕES
+==========================*/
+
+.opcoes{
+
+    display:flex;
+
+    justify-content:space-between;
+
+}
+
+
+/*==========================
+            BOTÃO
+==========================*/
+
+.botao{
+
+    display:flex;
+
+}
+
+
+/*==========================
+            DIVISOR
+==========================*/
+
+.divisor{
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+
+/*==========================
+        LOGIN SOCIAL
+==========================*/
+
+.login-social{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+
+/*==========================
+            FOOTER
+==========================*/
+
+.card footer{
+
+    display:flex;
+
+    justify-content:space-between;
+
+}
