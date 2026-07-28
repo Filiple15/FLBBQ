@@ -25,7 +25,7 @@
 
 # 📖 Sobre o Projeto
 
-O **FL Outdoors** é um projeto de desenvolvimento de um e-commerce moderno criado para substituir e evoluir o site atual da empresa, oferecendo uma experiência mais rápida, organizada e intuitiva para seus clientes.
+O <a href="https://flbbq.vercel.app/index.html">**FL Outdoors**</a> é um projeto de desenvolvimento de um e-commerce moderno criado para substituir e evoluir o site atual da empresa, oferecendo uma experiência mais rápida, organizada e intuitiva para seus clientes.
 
 Mais do que uma simples reformulação visual, o projeto foi planejado para possuir uma arquitetura escalável, separando completamente o Front-end do Back-end. Essa abordagem permitirá maior liberdade para futuras implementações, melhor manutenção do código e integração com diferentes serviços.
 
