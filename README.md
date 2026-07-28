@@ -286,12 +286,6 @@ Todas as escolhas de cores, componentes e estrutura da interface seguem esses pr
 
 ---
 
-➡️ **Continua na Parte 2**, onde serão apresentados a arquitetura do projeto, funcionalidades, estrutura de pastas, roadmap completo, evolução das versões V1 até V5, aprendizados e o status atual do desenvolvimento.
-
-Essa organização facilita a escalabilidade do projeto, tornando futuras implementações muito mais simples.
-
----
-
 # 🚀 Funcionalidades
 
 ## ✅ Implementadas
@@ -630,42 +624,6 @@ Em breve será disponibilizado um GIF demonstrando toda a navegação da aplica�
 
 ```text
 docs/gif/demo.gif
-```
-
----
-
-# ⚙️ Como Executar o Projeto
-
-## 1️⃣ Clone o repositório
-
-```bash
-git clone https://github.com/SEU-USUARIO/FL-Outdoors.git
-```
-
----
-
-## 2️⃣ Entre na pasta
-
-```bash
-cd FL-Outdoors
-```
-
----
-
-## 3️⃣ Abra o projeto
-
-Abra a pasta utilizando o **Visual Studio Code**.
-
----
-
-## 4️⃣ Execute o Front-end
-
-Utilize uma extensão como **Live Server** para iniciar a aplicação.
-
-Ou simplesmente abra o arquivo:
-
-```text
-index.html
 ```
 
 ---
