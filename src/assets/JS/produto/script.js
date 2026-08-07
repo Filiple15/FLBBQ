@@ -161,145 +161,107 @@ function renderizarProdutos(produtos){
         const temPromocao = preco.promocional && preco.promocional < preco.cheio
         listaProdutos.innerHTML += `
 
-        <a href="produto.html?id=${produto.id}" class="link-produto">
+<a href="produto.html?id=${produto.id}" class="link-produto">
 
+    <article class="card-produto">
 
-            <article class="card-produto">
+        ${
+            temPromocao
+            ?
+            `
+            <span class="status promocao">
+                ${calcularDesconto(preco.cheio, preco.promocional)}% OFF
+            </span>
+            `
+            :
+            ""
+        }
 
+        <div class="image-produto">
 
-                ${
-                    temPromocao
-                    ?
-                    `
-                    <span class="status promocao">
-                        Promoção
-                    </span>
-                    `
-                    :
-                    ""
-                }
+            <img
+                src="${imagemPrincipal?.caminho ?? '../../imgs/produtos/Bone-Columbia-PFG.png'}"
+                alt="${produto.nome}"
+            >
 
+        </div>
 
+        <div class="info-produto">
 
-                <div class="image-produto">
+            <h3>
 
-                    <img 
-                        src="${imagemPrincipal?.caminho ?? './src/assets/imgs/sem-imagem.png'}"
-                        alt="${produto.nome}"
-                    >
+                ${produto.nome}
 
-                </div>
+            </h3>
 
+            <div class="avaliacao">
 
+                ★★★★★
+                <span>(0)</span>
 
-                <div class="info-produto">
+            </div>
 
+            <div class="bloco-preco">
 
-                    <h3>
-                        ${produto.nome}
-                    </h3>
-
-
-
-                    <div class="avaliacao">
-
-                        ★★★★★
-
-                        <span>
-                            (0)
-                        </span>
-
-                    </div>
-
-
+                <div class="preco-antigo">
 
                     ${
                         temPromocao
-                        ?
-                        `
-                        <div class="preco antigo">
-
-                            R$ ${formatarPreco(preco.cheio)}
-
-                        </div>
-                        `
-                        :
-                        ""
+                        ? `R$ ${formatarPreco(preco.cheio)}`
+                        : "&nbsp;"
                     }
-
-
-
-                    <div class="preco">
-
-
-                        R$ ${
-                            formatarPreco(
-                                temPromocao 
-                                ? preco.promocional 
-                                : preco.cheio
-                            )
-                        }
-
-
-                    </div>
-
-
-
-
-                    <div class="parcelas">
-
-                        ou 12x sem juros
-
-                    </div>
-
-
-
-                    ${temPromocao?
-                    `
-                        <div class="preco-antigo">
-
-                        R$ ${formatarPreco(preco.cheio)}
-
-                        </div>
-                    `
-                    :
-                    ""
-                    }
-
-
-                    <div class="preco-atual">
-
-                    R$ ${
-                    formatarPreco(
-                    temPromocao 
-                    ? preco.promocional 
-                    : preco.cheio
-                    )
-                    }
-
-                    </div>
-
-
-
-
-                    <button>
-
-                        <i class="fa-solid fa-cart-shopping"></i>
-
-                        Comprar
-
-                    </button>
-
-
 
                 </div>
 
+                <div class="preco-atual">
 
-            </article>
+                    R$ ${
+                        formatarPreco(
+                            temPromocao
+                                ? preco.promocional
+                                : preco.cheio
+                        )
+                    }
 
+                </div>
 
-        </a>
-        `
+            </div>
+
+            <div class="bloco-condicoes">
+
+                <div class="parcelas">
+
+                    ou 12x sem juros
+
+                </div>
+
+                <div class="pix">
+
+                    ${
+                        temPromocao
+                        ? `${calcularDesconto(preco.cheio, preco.promocional)}% OFF no PIX`
+                        : "&nbsp;"
+                    }
+
+                </div>
+
+            </div>
+
+            <button class="btnCompra">
+
+                <i class="fa-solid fa-cart-shopping"></i>
+
+                Comprar
+
+            </button>
+
+        </div>
+
+    </article>
+
+</a>
+
+`;
     });
 }
 
